@@ -1,0 +1,49 @@
+th.sortable {
+    color: #666;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+th.sortable:hover {
+    color: black;
+}
+
+th.sorted-asc, th.sorted-desc  {
+    color: black;
+    font-weight: bold;
+}
+
+td {
+    background-color: white;
+}
+
+td.odd {
+    background-color: #666;
+    color: white;
+}
+                                
+td.hovered {
+    background-color: lightblue;
+    color: #666;
+}
+
+div.pager {
+    text-align: center;
+    margin: 1em 0;
+}
+
+div.pager span {
+    display: inline-block;
+    width: 1.8em;
+    height: 1.8em;
+    line-height: 1.8;
+    text-align: center;
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+    margin-right: 0.5em;
+}
+
+div.pager span.active {
+    background: #c00;
+}

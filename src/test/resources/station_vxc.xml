@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<om:MetadataCollection xmlns:om="http://www.opengis.net/om/1.0" xmlns="http://dms.ec.gc.ca/schema/metadata/1.0" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <om:member>
+        <om:Metadata>
+            <om:metadata>
+                <set>
+                    <general>
+                        <dataset name="/msc/staci/monitoring/station/instance-xml-2.0"/>
+                        <id xlink:href="/metadata/msc/staci/monitoring/station/instance-xml-2.0/1152106?version=1.0"/>
+                        <parent xlink:href="/metadata/msc/staci/monitoring/station/definition-xml-2.0/1.0"/>
+                    </general>
+                    <identification-elements>
+                        <identification-element group="history" name="active_flag" value="true"/>
+                        <identification-element group="history" name="creation_datetime" uom="datetime" value="2016-08-20T00:24:25.539Z"/>
+                        <identification-element group="history" name="version" value="1.0"/>
+                        <identification-element group="history" name="system_generated" value="false"/>
+                        <identification-element group="history" name="eff_start_datetime" uom="datetime" value="2016-08-19T18:52:00.000Z"/>
+                        <identification-element group="history" name="created_by" value="tammy"/>
+                        <identification-element group="history" name="reason_for_change" value="sample staci station xml created"/>
+                    </identification-elements>
+                </set>
+            </om:metadata>
+            <om:result>
+                <elements>
+                    <element def_id="5d5150cfe33e652" group="identification" id="80b006821b06a420" index="1" name="msc_identifier" uom="unitless" value="1152106">
+                        <element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="Sfc-Wx-Config"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                    </element>
+                    <element def_id="bae74ab89d316e36" group="msl_pressure_reduction_coefficients" id="2897165e15049f5" index="1" name="coefficient" uom="unitless" value="0.0">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+					</element>
+                    <element def_id="bae74ab89d316e36" group="msl_pressure_reduction_coefficients" id="9499ec5712304f61" index="2" name="coefficient" uom="unitless" value="0.0">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+					</element>
+                    <element def_id="bae74ab89d316e36" group="msl_pressure_reduction_coefficients" id="d07b86f9217bcb6b" index="3" name="coefficient" uom="unitless" value="0.0">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+					</element>
+                    <element def_id="992f90d79fdd98df" group="barometry" id="bb626eb4106e03f" index="1" name="barometer_reduction_offset" uom="unitless" value="0.0">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="3b02221f463183e1" group="paroscientific_coefficients" id="88bbeb9bd8e73d74" index="1" name="row" uom="unitless" value="1">
+                            <element def_id="32c85eb2fada75c0" group="paroscientific_coefficients" id="41cd2ca11b2b124c" index="1" name="coefficient" uom="unitless" value="0.0"/>
+                            <element def_id="32c85eb2fada75c0" group="paroscientific_coefficients" id="45d82449310f7b8e" index="2" name="coefficient" uom="unitless" value="0.0"/>
+                            <element def_id="32c85eb2fada75c0" group="paroscientific_coefficients" id="ca50bf844a100681" index="3" name="coefficient" uom="unitless" value="0.0"/>
+                        </element>
+                        <element def_id="3b02221f463183e1" group="paroscientific_coefficients" id="ad0e4885eea8dce4" index="2" name="row" uom="unitless" value="2">
+                            <element def_id="32c85eb2fada75c0" group="paroscientific_coefficients" id="6f3b96e3ebd32f65" index="1" name="coefficient" uom="unitless" value="0.0"/>
+                            <element def_id="32c85eb2fada75c0" group="paroscientific_coefficients" id="bea73a536b34b819" index="2" name="coefficient" uom="unitless" value="0.0"/>
+                            <element def_id="32c85eb2fada75c0" group="paroscientific_coefficients" id="a2fd53959247f4e" index="3" name="coefficient" uom="unitless" value="0.0"/>
+                        </element>
+                        <element def_id="3b02221f463183e1" group="paroscientific_coefficients" id="bb30922e6ab833" index="3" name="row" uom="unitless" value="3">
+                            <element def_id="32c85eb2fada75c0" group="paroscientific_coefficients" id="6f1baf540735af6d" index="1" name="coefficient" uom="unitless" value="0.0"/>
+                            <element def_id="32c85eb2fada75c0" group="paroscientific_coefficients" id="9033c3d681e04fd4" index="2" name="coefficient" uom="unitless" value="0.0"/>
+                            <element def_id="32c85eb2fada75c0" group="paroscientific_coefficients" id="c4bdc22136c84a6a" index="3" name="coefficient" uom="unitless" value="0.0"/>
+                        </element>
+                    </element>
+                    <element def_id="c8f6fbb063661e61" group="snow_mean_temperature" id="2df01e9ccf966f45" index="1" name="max" uom="°C" value="99.0">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+					</element>
+                    <element def_id="c9ae6c5d61dad7c7" group="snow_mean_temperature" id="f1e30113bdebccd0" index="1" name="min" uom="°C" value="90.0">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+					</element>
+                    <element def_id="5b83921ec27d3f89" group="snow_mean_temperature" id="784ed1ceda5d8539" index="1" name="usage" uom="unitless" value="true">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+					</element>
+                    <element def_id="15452d6bcbd42ac0" group="information" id="eddf63148642d8a4" index="1" name="altimeter" uom="unitless" value="suppress">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+					</element>
+                    <element def_id="aad94124c6c9843" group="information" id="91f7d89f2eede5b2" index="1" name="config" uom="unitless" value="N">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+					</element>
+                    <element def_id="c6d67686d0ce45f5" group="location" id="dacc0c23c1132b11" index="1" name="station_elevation" uom="m" value="926.687">
+                        <element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+                    </element>
+                    <element def_id="asndwqie29321323" group="location" id="3nre733ns6221432" index="1" name="station_elevation_source" uom="unitless" value="Unknown">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+                    </element>
+                    <element def_id="fme9w392sa211323" group="location" id="n37dnbd36bas9e12" index="1" name="station_elevation_type" uom="unitless" value="Unknown">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+					</element>
+                    <element def_id="4f5fa803968b7442" group="location" id="149e47f764ca31d6" index="1" name="geopotential_elevation" uom="m" value="926.2109">
+                        <element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                    </element>
+                    <element def_id="wdnwqe76sd72n21s" group="barometry" id="3meq8e21ne2721n3" index="1" name="barometer_height" uom="m" value="926.2109">
+                        <element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SIS"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+                    </element>
+                    <element def_id="23n68snae2q7baae" group="location" id="bt84n26ba6i54bew" index="1" name="coordinate_source" uom="unitless" value="Unknown">
+                        <element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+                    </element>
+                    <element def_id="mgi9tym658m65956" group="location" id="n498n127w2we3211" index="1" name="coordinate_system" uom="unitless" value="Unknown">
+                        <element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+                    </element>
+                    <element def_id="mnrem8m2322123s2" group="ownership" id="m98372nw2n4b9rnw" index="1" name="equipment_ownership" uom="unitless" value="EC owns all equipment">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+					</element>
+                    <element def_id="m82ejwk21324ns31" group="maintenance" id="b25423ab21n135f3" index="1" name="inspection_interval" uom="unitless" value="Inspected every 6 months">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+					</element>
+                    <element def_id="mw8bbu1namms2342" group="ownership" id="n37891nsew35532s" index="1" name="land_ownership" uom="unitless" value="Unknown">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+					</element>
+                    <element def_id="fd0c72cdf9c615a3" group="information" id="254778320bfc4556" index="1" name="indicator" uom="unitless" value="auto">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+					</element>
+                    <element def_id="6b1f5446c76e757b" group="location" id="3586b91c644b507f" index="1" name="latitude" uom="°" value="49.617611">
+                        <element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+                    </element>
+                    <element def_id="953c42dd2ed8988c" group="location" id="e0355f5e55e716c1" index="1" name="latitude_degrees" uom="°" value="49">
+                        <element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+                    </element>
+                    <element def_id="5d5150cfe33e651" group="location" id="80b006821b06a419" index="1" name="latitude_minutes" uom="min" value="37">
+                        <element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+                    </element>
+                    <element def_id="sajdwqi9123ma92" group="location" id="23me329asme8122s" index="1" name="latitude_seconds" uom="" value="3.399">
+                        <element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+                    </element>
+                    <element def_id="df2d59aec42b21fb" group="location" id="8cc1455dbced42d2" index="1" name="longitude" uom="unitless" value="-115.789055">
+                        <element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+                    </element>
+                    <element def_id="e6bbfc89c16379a0" group="location" id="64b63c1b46861ae6" index="1" name="longitude_degrees" uom="°" value="-115">
+                        <element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+                    </element>
+                    <element def_id="ee88c323f6ab2fbf" group="location" id="d3345c077293f560" index="1" name="longitude_minutes" uom="min" value="47">
+                        <element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+                    </element>
+                    <element def_id="wmewqke9213n4721" group="location" id="wqne83221n371123" index="1" name="longitude_seconds" uom="" value="20.598">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+					</element>
+                    <element def_id="495a32a799126786" group="time_zone" id="2b936ba84c73beaa" index="1" name="message_timezone" uom="unitless" value="GMT">
+                        <element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                    </element>
+                    <element def_id="2095674405aec305" group="identification" id="68c7454884c86d8a" index="1" name="station_identifier" uom="unitless" value="VXC">
+                        <element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+                    </element>
+                    <element def_id="89dm3ksm5ns1ksx4" group="identification" id="asj3mdsch382nsb2" index="1" name="station_identifier_in" uom="unitless" value="VXC">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="Sfc-Wx-Config"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                    </element>
+                    <element def_id="ajs238znzqvbe212" group="identification" id="snh37xzn712nzsja" index="1" name="wmo_identifier" uom="unitless" value="71660">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+                    </element>
+                    <element def_id="sajdm82323291mam" group="classification" id="jsadwqn12738sas1" index="1" name="data_set" uom="unitless" value="CA">
+                        <element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="Sfc-Wx-Config"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+						<language name="en" value="Campbell Scientific Data Logger Data"/>
+                    </element>
+                    <element def_id="asnewq812an2132a" group="classification" id="32m328sne32n8w12" index="1" name="message_type" uom="unitless" value="11">
+                        <element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                    </element>
+                    <element def_id="fd2018b837364e8" group="classification" id="4d67d2fb253106a2" index="1" name="station_type" uom="unitless" value="F0115">
+                        <language name="en" value="SURFACE AUTO STATION"/>
+                        <element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+                    </element>
+                    <element def_id="nsadm39esm2321q" group="information" id="sandwque912k23m2" index="1" name="station_name" uom="unitless" value="CRANBROOK AIRPORT AUTO">
+                        <element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+                    </element>
+                    <element def_id="5ff2a2572e78bf95" group="status" id="da08f6c8b0de28b1" index="1" name="station_status" uom="unitless" value="Active">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+                        <language name="en" value="In Service"/>
+                    </element>
+                    <element def_id="m489nds323123456" group="transmission" id="945nsn12sd8322q4" index="1" name="primary_data_transmission_method" uom="unitless" value="Cellular Modem">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+					</element>
+                    <element def_id="9w21sanxce214asd" group="transmission" id="12434s34anrvu5y5" index="1" name="secondary_data_transmission_method" uom="unitless" value="No secondary method needed">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+					</element>
+                    <element def_id="cw23gscds464dss2" group="information" id="8954j9nrm95nre56" index="1" name="data_provider" uom="unitless" value="MSC">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="Sfc-Wx-Config"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <language name="en" value="Meteorological Service of Canada"/>
+                        <language name="fr" value="Service météorologique du Canada"/>
+                    </element>
+                    <element def_id="4602cef61df87bac" group="information" id="8cec9e4386993141" index="1" name="test_mode" uom="unitless" value="false">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+					</element>
+                    <element def_id="acebc3b9023386x" group="identification" id="791050a95f2d6420" index="1" name="climate_identifier" uom="unitless" value="1152106">
+                        <element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+                    </element>
+                    <element def_id="fb828c1fd619fb90" group="summer_range" id="2853ab5942b3ca68" index="1" name="end_day" uom="unitless" value="11">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+					</element>
+                    <element def_id="fd1add14b3be59fd" group="summer_range" id="2cba0bff0d3d922b" index="1" name="end_month" uom="unitless" value="9">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+					</element>
+                    <element def_id="4bd6a72ad5e03793" group="summer_range" id="e767de60362bb31b" index="1" name="start_day" uom="unitless" value="1">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+					</element>
+                    <element def_id="e1aff47437fdbdb3" group="summer_range" id="2dea8fa94efee334" index="1" name="start_month" uom="unitless" value="4">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+					</element>
+                    <element def_id="acebc3c9203386e" group="information" id="791510a95f2d6402" index="1" name="tso" uom="unitless" value="AM-PY10">
+						<language name="en" value="Atmospheric Monitoring, Richmond"/>
+						<language name="fr" value="Surveillance atmosphérique, Richmond"/>
+                        <element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+                    </element>
+                    <element def_id="aecbc3c9203386e" group="location" id="719510a95f2d6402" index="1" name="province" uom="unitless" value="BC">
+                        <language name="en" value="BRITISH COLUMBIA"/>
+                        <language name="fr" value="COLOMBIE-BRITANNIQUE"/>
+                        <element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+                    </element>
+                    <element def_id="22b75dabf834140c" group="collection" id="5f117cba5acbb032" index="1" name="collection_type" uom="unitless" value="MSC datalogger">
+                        <element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+                    </element>
+                    <element def_id="asdwqm28373san32" group="collection" id="mw2j392msmae9322" index="1" name="collection_method" uom="unitless" value="Operator is a machine">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+                    </element>
+                    <element def_id="8d5322140f61e430" group="classification" id="5ed092848b5fe4d7" index="1" name="wigos_network_affiliation" uom="unitless" value="Reference Climate Station">
+                        <element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="SAP"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+                    </element>
+                    <element def_id="e262b5f8a121e712" group="synoptic_transmit_hours" id="7469355c3cf27e36" index="1" name="hour" uom="unitless" value="true">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="acebc3b9023386d" group="synoptic_transmit_hours" id="791050a95f2d6401" index="1" name="value" uom="unitless" value="0"/>
+                    </element>
+                    <element def_id="e262b5f8a121e712" group="synoptic_transmit_hours" id="472cc4a7bfb226f3" index="2" name="hour" uom="unitless" value="false">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="acebc3b9023386d" group="synoptic_transmit_hours" id="3d2ebcf203e2594a" index="1" name="value" uom="unitless" value="1"/>
+                    </element>
+                    <element def_id="e262b5f8a121e712" group="synoptic_transmit_hours" id="a2277f9f7448ede9" index="3" name="hour" uom="unitless" value="false">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="acebc3b9023386d" group="synoptic_transmit_hours" id="2e2c23298f7e3694" index="1" name="value" uom="unitless" value="2"/>
+                    </element>
+                    <element def_id="e262b5f8a121e712" group="synoptic_transmit_hours" id="4bc8c74978182eff" index="4" name="hour" uom="unitless" value="false">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="acebc3b9023386d" group="synoptic_transmit_hours" id="2b4674b31051ebe7" index="1" name="value" uom="unitless" value="3"/>
+                    </element>
+                    <element def_id="e262b5f8a121e712" group="synoptic_transmit_hours" id="7158084f0c1f0574" index="5" name="hour" uom="unitless" value="false">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="acebc3b9023386d" group="synoptic_transmit_hours" id="69101db0c869e26b" index="1" name="value" uom="unitless" value="4"/>
+                    </element>
+                    <element def_id="e262b5f8a121e712" group="synoptic_transmit_hours" id="d190afeba80011f8" index="6" name="hour" uom="unitless" value="false">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="acebc3b9023386d" group="synoptic_transmit_hours" id="9e1f5089412f9b0c" index="1" name="value" uom="unitless" value="5"/>
+                    </element>
+                    <element def_id="e262b5f8a121e712" group="synoptic_transmit_hours" id="3dece505d74cb6cb" index="7" name="hour" uom="unitless" value="true">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="acebc3b9023386d" group="synoptic_transmit_hours" id="1adb4be46f9629b2" index="1" name="value" uom="unitless" value="6"/>
+                    </element>
+                    <element def_id="e262b5f8a121e712" group="synoptic_transmit_hours" id="d3fbae695913d714" index="8" name="hour" uom="unitless" value="false">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="acebc3b9023386d" group="synoptic_transmit_hours" id="cd8446722a57fb93" index="1" name="value" uom="unitless" value="7"/>
+                    </element>
+                    <element def_id="e262b5f8a121e712" group="synoptic_transmit_hours" id="30f462f227ec82e0" index="9" name="hour" uom="unitless" value="false">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="acebc3b9023386d" group="synoptic_transmit_hours" id="c75b6434f0ccf013" index="1" name="value" uom="unitless" value="8"/>
+                    </element>
+                    <element def_id="e262b5f8a121e712" group="synoptic_transmit_hours" id="9b834907879d9735" index="10" name="hour" uom="unitless" value="false">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="acebc3b9023386d" group="synoptic_transmit_hours" id="9f82bc51f05d6cbf" index="1" name="value" uom="unitless" value="9"/>
+                    </element>
+                    <element def_id="e262b5f8a121e712" group="synoptic_transmit_hours" id="b042218cb5e87ef4" index="11" name="hour" uom="unitless" value="false">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="acebc3b9023386d" group="synoptic_transmit_hours" id="21226a8d383ef4c2" index="1" name="value" uom="unitless" value="10"/>
+                    </element>
+                    <element def_id="e262b5f8a121e712" group="synoptic_transmit_hours" id="caef47183ade5045" index="12" name="hour" uom="unitless" value="false">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="acebc3b9023386d" group="synoptic_transmit_hours" id="c65d18669c2384e4" index="1" name="value" uom="unitless" value="11"/>
+                    </element>
+                    <element def_id="e262b5f8a121e712" group="synoptic_transmit_hours" id="44dce8188c1225c1" index="13" name="hour" uom="unitless" value="true">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="acebc3b9023386d" group="synoptic_transmit_hours" id="6ab2053b1e7f71b6" index="1" name="value" uom="unitless" value="12"/>
+                    </element>
+                    <element def_id="e262b5f8a121e712" group="synoptic_transmit_hours" id="11d0f19061cdb984" index="14" name="hour" uom="unitless" value="false">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="acebc3b9023386d" group="synoptic_transmit_hours" id="82e24914eb7f63c0" index="1" name="value" uom="unitless" value="13"/>
+                    </element>
+                    <element def_id="e262b5f8a121e712" group="synoptic_transmit_hours" id="7efca4042fa69995" index="15" name="hour" uom="unitless" value="false">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="acebc3b9023386d" group="synoptic_transmit_hours" id="e05c0ea97366c853" index="1" name="value" uom="unitless" value="14"/>
+                    </element>
+                    <element def_id="e262b5f8a121e712" group="synoptic_transmit_hours" id="5cd8cffaf136be8c" index="16" name="hour" uom="unitless" value="false">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="acebc3b9023386d" group="synoptic_transmit_hours" id="5fbe7899bfbbe4c" index="1" name="value" uom="unitless" value="15"/>
+                    </element>
+                    <element def_id="e262b5f8a121e712" group="synoptic_transmit_hours" id="5aaeba10ab1ff34b" index="17" name="hour" uom="unitless" value="false">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="acebc3b9023386d" group="synoptic_transmit_hours" id="9bf890985cf7a7d9" index="1" name="value" uom="unitless" value="16"/>
+                    </element>
+                    <element def_id="e262b5f8a121e712" group="synoptic_transmit_hours" id="6a8c98dfafba4c30" index="18" name="hour" uom="unitless" value="false">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="acebc3b9023386d" group="synoptic_transmit_hours" id="9eac96b1d0adb599" index="1" name="value" uom="unitless" value="17"/>
+                    </element>
+                    <element def_id="e262b5f8a121e712" group="synoptic_transmit_hours" id="216c62acb1b9d435" index="19" name="hour" uom="unitless" value="true">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="acebc3b9023386d" group="synoptic_transmit_hours" id="8fc5ad59b6e974a3" index="1" name="value" uom="unitless" value="18"/>
+                    </element>
+                    <element def_id="e262b5f8a121e712" group="synoptic_transmit_hours" id="38a637fc0a471dd1" index="20" name="hour" uom="unitless" value="false">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="acebc3b9023386d" group="synoptic_transmit_hours" id="202b6e96997905a8" index="1" name="value" uom="unitless" value="19"/>
+                    </element>
+                    <element def_id="e262b5f8a121e712" group="synoptic_transmit_hours" id="48acb3d5e5e03ff0" index="21" name="hour" uom="unitless" value="false">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="acebc3b9023386d" group="synoptic_transmit_hours" id="c972fc21cad4c8b4" index="1" name="value" uom="unitless" value="20"/>
+                    </element>
+                    <element def_id="e262b5f8a121e712" group="synoptic_transmit_hours" id="dd8c966d24ca9893" index="22" name="hour" uom="unitless" value="false">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="acebc3b9023386d" group="synoptic_transmit_hours" id="aac22e2e980151bd" index="1" name="value" uom="unitless" value="21"/>
+                    </element>
+                    <element def_id="e262b5f8a121e712" group="synoptic_transmit_hours" id="cd9682760acc3f29" index="23" name="hour" uom="unitless" value="false">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="acebc3b9023386d" group="synoptic_transmit_hours" id="3804b205498c21f1" index="1" name="value" uom="unitless" value="22"/>
+                    </element>
+                    <element def_id="e262b5f8a121e712" group="synoptic_transmit_hours" id="7cc55b24374ca4d" index="24" name="hour" uom="unitless" value="false">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="acebc3b9023386d" group="synoptic_transmit_hours" id="fcc4c99cdfba95d5" index="1" name="value" uom="unitless" value="23"/>
+                    </element>
+                    <element def_id="hhr560647989e125" group="information" id="1ope9j7ec40182e1" index="1" name="remark" uom="unitless" value="1">
+                        <element def_id="h98gyb2f06f649ec" group="information" id="78df97ea143b17e5" index="1" name="updated_by" uom="unitless" value="GT"/>
+                        <element def_id="87erfb8u16f649ec" group="classification" id="jkhh23ea143b17e5" index="1" name="category" uom="unitless" value="Table Metadata"/>
+                        <element def_id="98iofc5ed0193588" group="information" id="8o4aa59c96a43454" index="1" name="remark" uom="unitless" value="Table 160 frequency changed to 'Hourly'."/>
+                        <element def_id="nkd6u75ed0165j75" group="information" id="6h4ka59c96a43454" index="1" name="user_comments" uom="unitless" value="Table 160 output changed per partner's request"/>
+                        <element def_id="kju56s75e89b6dgr" group="information" id="ewg6hj9c934h6h57" index="1" name="creation_datetime" uom="datetime" value="2016-08-20T00:24:25.539Z"/>
+                    </element>
+                    <element def_id="hhr560647989e125" group="information" id="oper6j7ec40182e1" index="2" name="remark" uom="unitless" value="2">
+                        <element def_id="h98gyb2f06f649ec" group="information" id="78df97ea143b17e5" index="1" name="updated_by" uom="unitless" value="GT"/>
+                        <element def_id="87erfb8u16f649ec" group="classification" id="jkhh23ea143b17e5" index="1" name="category" uom="unitless" value="Table Status"/>
+                        <element def_id="98iofc5ed0193588" group="information" id="8o4aa59c96a43454" index="1" name="remark" uom="unitless" value="Table 21 added."/>
+                        <element def_id="kju56s75e89b6dgr" group="information" id="ewg6hj9c934h6h57" index="1" name="creation_datetime" uom="datetime" value="2016-08-20T00:31:25.539Z"/>
+                    </element>
+                    <element def_id="sjaw221weekt21sa" group="information" id="32me3mnwd34942fs" index="1" name="historical_remark" uom="unitless" value="Buraburabura">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="false"/>
+					</element>
+                    <element def_id="8dcad2603210641d" group="temperature_limits" id="438fa35b6830190c" index="1" name="month" uom="unitless" value="1">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="bf64785025b9efc" group="temperature_limits" id="c39b1e4df7b9c510" index="1" name="max" uom="°C" value="50.0"/>
+                        <element def_id="1459b4fb5dc4de63" group="temperature_limits" id="883d097fb28cace1" index="1" name="min" uom="°C" value="-50.0"/>
+                    </element>
+                    <element def_id="8dcad2603210641d" group="temperature_limits" id="e6939969ec30bfe8" index="2" name="month" uom="unitless" value="2">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="bf64785025b9efc" group="temperature_limits" id="9a768f79a7d78cc8" index="1" name="max" uom="°C" value="50.0"/>
+                        <element def_id="1459b4fb5dc4de63" group="temperature_limits" id="aa5871e602a85158" index="1" name="min" uom="°C" value="-50.0"/>
+                    </element>
+                    <element def_id="8dcad2603210641d" group="temperature_limits" id="aeb3df4108297959" index="3" name="month" uom="unitless" value="3">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="bf64785025b9efc" group="temperature_limits" id="2c08c6eaa6774a15" index="1" name="max" uom="°C" value="50.0"/>
+                        <element def_id="1459b4fb5dc4de63" group="temperature_limits" id="533a42ae2f55cd78" index="1" name="min" uom="°C" value="-50.0"/>
+                    </element>
+                    <element def_id="8dcad2603210641d" group="temperature_limits" id="5495a35f5c646e8a" index="4" name="month" uom="unitless" value="4">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="bf64785025b9efc" group="temperature_limits" id="76f954317bceed1f" index="1" name="max" uom="°C" value="50.0"/>
+                        <element def_id="1459b4fb5dc4de63" group="temperature_limits" id="724701ac6ec8c1ad" index="1" name="min" uom="°C" value="-50.0"/>
+                    </element>
+                    <element def_id="8dcad2603210641d" group="temperature_limits" id="dcc8b06008571644" index="5" name="month" uom="unitless" value="5">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="bf64785025b9efc" group="temperature_limits" id="59dc5bb4e261fbc3" index="1" name="max" uom="°C" value="50.0"/>
+                        <element def_id="1459b4fb5dc4de63" group="temperature_limits" id="85552364a9fe743b" index="1" name="min" uom="°C" value="-50.0"/>
+                    </element>
+                    <element def_id="8dcad2603210641d" group="temperature_limits" id="bab70901fa948d73" index="6" name="month" uom="unitless" value="6">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="bf64785025b9efc" group="temperature_limits" id="a0d4239a466456be" index="1" name="max" uom="°C" value="50.0"/>
+                        <element def_id="1459b4fb5dc4de63" group="temperature_limits" id="663859e7cb925546" index="1" name="min" uom="°C" value="-50.0"/>
+                    </element>
+                    <element def_id="8dcad2603210641d" group="temperature_limits" id="688f55f13e7b59a1" index="7" name="month" uom="unitless" value="7">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="bf64785025b9efc" group="temperature_limits" id="e2ee9b7caa115c85" index="1" name="max" uom="°C" value="50.0"/>
+                        <element def_id="1459b4fb5dc4de63" group="temperature_limits" id="acd61c546e37f1d5" index="1" name="min" uom="°C" value="-50.0"/>
+                    </element>
+                    <element def_id="8dcad2603210641d" group="temperature_limits" id="c486c1cb8d139600" index="8" name="month" uom="unitless" value="8">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="bf64785025b9efc" group="temperature_limits" id="cb9a04e4af0faf91" index="1" name="max" uom="°C" value="50.0"/>
+                        <element def_id="1459b4fb5dc4de63" group="temperature_limits" id="5a492a9bec887679" index="1" name="min" uom="°C" value="-50.0"/>
+                    </element>
+                    <element def_id="8dcad2603210641d" group="temperature_limits" id="9e9018dc157fdfe5" index="9" name="month" uom="unitless" value="9">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="bf64785025b9efc" group="temperature_limits" id="9116984dc1390b7c" index="1" name="max" uom="°C" value="50.0"/>
+                        <element def_id="1459b4fb5dc4de63" group="temperature_limits" id="f13eefce93e0905c" index="1" name="min" uom="°C" value="-50.0"/>
+                    </element>
+                    <element def_id="8dcad2603210641d" group="temperature_limits" id="2ad189484d7b8aec" index="10" name="month" uom="unitless" value="10">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="bf64785025b9efc" group="temperature_limits" id="33949727ce4fa2a9" index="1" name="max" uom="°C" value="50.0"/>
+                        <element def_id="1459b4fb5dc4de63" group="temperature_limits" id="1049d431d94f9d6a" index="1" name="min" uom="°C" value="-50.0"/>
+                    </element>
+                    <element def_id="8dcad2603210641d" group="temperature_limits" id="62e83705135da7e4" index="11" name="month" uom="unitless" value="11">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="bf64785025b9efc" group="temperature_limits" id="2925bad44ac138ae" index="1" name="max" uom="°C" value="50.0"/>
+                        <element def_id="1459b4fb5dc4de63" group="temperature_limits" id="616d7b5d545f3e23" index="1" name="min" uom="°C" value="-50.0"/>
+                    </element>
+                    <element def_id="8dcad2603210641d" group="temperature_limits" id="728cee4830e1cfb6" index="12" name="month" uom="unitless" value="12">
+						<element def_id="acebc3b9023386e" group="information" id="791050a95f2d6402" index="1" name="data_source" uom="unitless" value="JICC"/>
+						<element def_id="ama82334b2nw123" group="information" id="me98322n458659d2" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="bf64785025b9efc" group="temperature_limits" id="e478ccba90f17e1e" index="1" name="max" uom="°C" value="50.0"/>
+                        <element def_id="1459b4fb5dc4de63" group="temperature_limits" id="3e3161ec17d0edc" index="1" name="min" uom="°C" value="-50.0"/>
+                    </element>
+                </elements>
+            </om:result>
+        </om:Metadata>
+    </om:member>
+</om:MetadataCollection>

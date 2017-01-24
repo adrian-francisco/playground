@@ -1,0 +1,87 @@
+<om:ObservationCollection xmlns:om="http://www.opengis.net/om/1.0" xmlns="http://dms.ec.gc.ca/schema/point-observation/2.0" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <om:member>
+        <om:Observation>
+            <om:metadata>
+                <set>
+                    <general>
+                        <author build="build.214" name="MSC-DMS-Decoder-METAR" version="2.0"/>
+                        <dataset name="msc/observation/atmospheric/aviation/metar-1.1-ascii"/>
+                        <phase name="decoded-xml-2.0"/>
+                        <id xlink:href="/data/msc/observation/atmospheric/aviation/metar-1.1-ascii/decoded-xml-2.0/201311131500/220n001/cyoa/orig/man"/>
+                        <parent xlink:href="/data/msc/observation/atmospheric/aviation/metar-1.1-ascii/parsed-xml-2.0/201311131500/220n001/cyoa/orig/man"/>
+                    </general>
+                    <identification-elements>
+                        <element group="identification" name="date_time" orig-name="YYGGgg" uom="datetime" value="2013-11-13T15:00:00.000Z">
+                            <qualifier group="element" name="datetime_significance" uom="code" value="1"/>
+                        </element>
+                        <element code-src="std_code_source" code-type="report_type" group="identification" name="report_type" orig-name="TYPE" uom="code" value="METAR"/>
+                        <element group="identification" name="icao_station_identifier" orig-name="CCCC" uom="unitless" value="CYOA"/>
+                    </identification-elements>
+                </set>
+            </om:metadata>
+            <om:samplingTime>
+                <gml:TimeInstant>
+                    <gml:timePosition>2013-11-13T15:00:00.000Z</gml:timePosition>
+                </gml:TimeInstant>
+            </om:samplingTime>
+            <om:resultTime>
+                <gml:TimeInstant>
+                    <gml:timePosition>2013-11-13T15:08:28.378Z</gml:timePosition>
+                </gml:TimeInstant>
+            </om:resultTime>
+            <om:procedure xlink:href="/station/icao/cyoa/manned"/>
+            <om:observedProperty gml:remoteSchema="/schema/point-observation/2.0.xsd"/>
+            <om:featureOfInterest>
+                <gml:FeatureCollection>
+                    <gml:location>
+                        <gml:Point>
+                            <gml:pos>64.69888888888889 -110.61472222222223</gml:pos>
+                        </gml:Point>
+                    </gml:location>
+                </gml:FeatureCollection>
+            </om:featureOfInterest>
+            <om:result>
+                <orig-header>SACN45 CWAO 131500</orig-header>
+                <orig-msg>METAR CYOA 131500Z 33011KT 15SM SCT046 BKN060 M17/M19 A2989 RMK SC4SC3 SLP176=</orig-msg>
+                <elements>
+                    <element group="wind" name="wind_direction" orig-name="ddd" uom="°" value="330">
+                        <qualifier group="element" name="statistical_significance" uom="unitless" value="vectoral_average"/>
+                        <qualifier group="element" name="time_displacement" uom="min" value="-2"/>
+                        <qualifier group="element" name="time_duration" uom="min" value="2"/>
+                        <qualifier group="element" name="vertical_displacement" uom="m" value="10"/>
+                    </element>
+                    <element group="wind" name="wind_speed" orig-name="ff" uom="kn" value="11">
+                        <qualifier group="element" name="statistical_significance" uom="unitless" value="average"/>
+                        <qualifier group="element" name="time_displacement" uom="min" value="-2"/>
+                        <qualifier group="element" name="time_duration" uom="min" value="2"/>
+                        <qualifier group="element" name="vertical_displacement" uom="m" value="10"/>
+                    </element>
+                    <element group="visibility" name="horizontal_visibility" orig-name="VVVV" uom="mi" value="15">
+                        <qualifier group="element" name="data_acquisition" uom="code" value="1"/>
+                        <qualifier group="element" name="statistical_significance" uom="unitless" value="minimum_instantaneous"/>
+                    </element>
+                    <element code-src="local_tac" code-type="spec15-9-1-1" group="sky_condition" name="cloud_amount_coded" orig-name="NsNsNs" uom="code" value="SCT">
+                        <qualifier group="element" name="cloud_amount_reporting_method" uom="code" value="1"/>
+                        <qualifier group="index" name="cloud_layer_index" uom="unitless" value="1"/>
+                    </element>
+                    <element group="sky_condition" name="cloud_height" orig-name="hshshs" uom="100ft" value="46">
+                        <qualifier group="index" name="cloud_layer_index" uom="unitless" value="1"/>
+                    </element>
+                    <element code-src="local_tac" code-type="spec15-9-1-1" group="sky_condition" name="cloud_amount_coded" orig-name="NsNsNs" uom="code" value="BKN">
+                        <qualifier group="element" name="cloud_amount_reporting_method" uom="code" value="1"/>
+                        <qualifier group="index" name="cloud_layer_index" uom="unitless" value="2"/>
+                    </element>
+                    <element group="sky_condition" name="cloud_height" orig-name="hshshs" uom="100ft" value="60">
+                        <qualifier group="index" name="cloud_layer_index" uom="unitless" value="2"/>
+                    </element>
+                    <element group="temperature" name="air_temperature" orig-name="TT" uom="°C" value="-17"/>
+                    <element group="temperature" name="dew_point_temperature" orig-name="TdTd" uom="°C" value="-19"/>
+                    <element group="pressure" name="altimeter_setting" orig-name="QPhPhPhPh" uom="inHg" value="29.89"/>
+                    <element group="generic" name="remark" orig-name="RMK" uom="unitless" value="SC4SC3 SLP176"/>
+                    <element group="pressure" name="mean_sea_level_pressure" orig-name="RMK_SLP" uom="hPa" value="1017.6"/>
+                </elements>
+            </om:result>
+        </om:Observation>
+    </om:member>
+</om:ObservationCollection>

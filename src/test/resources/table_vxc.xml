@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<om:MetadataCollection xmlns:om="http://www.opengis.net/om/1.0" xmlns="http://dms.ec.gc.ca/schema/metadata/1.0" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <om:member>
+        <om:Metadata>
+            <om:metadata>
+                <set>
+                    <general>
+                        <dataset name="/msc/mr/monitoring/table_configuration/instance-xml-2.0"/>
+                        <id xlink:href="/metadata/msc/mr/monitoring/table_configuration/instance-xml-2.0/1152106?version=1.0"/>
+                        <parent xlink:href="/metadata/msc/mr/monitoring/table_configuration/definition-xml-2.0/1.0"/>
+                    </general>
+                    <identification-elements>
+                        <identification-element group="history" name="active_flag" value="true"/>
+                        <identification-element group="history" name="creation_datetime" uom="datetime" value="2016-08-20T00:24:25.539Z"/>
+                        <identification-element group="history" name="version" value="1.0"/>
+                        <identification-element group="history" name="system_generated" value="false"/>
+                        <identification-element group="history" name="eff_start_datetime" uom="datetime" value="2016-08-19T18:52:00.000Z"/>
+                        <identification-element group="history" name="created_by" value="tammy"/>
+                        <identification-element group="history" name="reason_for_change" value="sample MR station xml created"/>
+                    </identification-elements>
+                </set>
+            </om:metadata>
+            <om:result>
+                <elements>
+                    <element def_id="5d5150cfe33e6524" group="identification" id="80b006821b06a420" index="1" name="msc_identifier" uom="unitless" value="1152106">
+                        <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                        <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                    </element>
+                    <element def_id="69b8c0647989e125" group="identification" id="4fd7094734016eda" index="1" name="table_id" uom="unitless" value="15">
+                        <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                        <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="3261cea62e78ba3f" group="sensor" id="464c2180ca672701" index="1" name="element" uom="unitless" value="/msc/mr/monitoring/table_element/instance-xml-2.0/11/1001">
+                            <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            <element def_id="27feda44b963426e" group="sensor" id="22f45680ba37d1ef" index="1" name="lower" uom="unitless" value="15.0">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="83446a9897e5bca4" group="sensor" id="486a551d34aa4570" index="1" name="multiplier" uom="unitless" value="1.0">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="2487864a5ac2a245" group="sensor" id="70fd77b3a96c1b7" index="1" name="offset" uom="unitless" value="0.0">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="93e8ba29b4289f04" group="sensor" id="bbf8cc89b46dec71" index="1" name="suppressed" uom="unitless" value="false">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="ae224761e9b0ac98" group="sensor" id="24543a75a5b13c73" index="1" name="upper" uom="unitless" value="15.0">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="hg624761e9b0ac98" group="sensor" id="66r76f3da0be870e" index="1" name="active" uom="unitless" value="Y">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                        </element>
+                        <element def_id="3261cea62e78ba3f" group="sensor" id="9b48ea6b4a495488" index="2" name="element" uom="unitless" value="/msc/mr/monitoring/table_element/instance-xml-2.0/11/1004">
+                            <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            <element def_id="27feda44b963426e" group="sensor" id="f3d4b1c74b8c467b" index="1" name="lower" uom="unitless" value="2004.0">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="83446a9897e5bca4" group="sensor" id="733bab6e3490ab41" index="1" name="multiplier" uom="unitless" value="1.0">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="2487864a5ac2a245" group="sensor" id="ec3b4df95292ea37" index="1" name="offset" uom="unitless" value="0.0">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="93e8ba29b4289f04" group="sensor" id="8bbe0f8736378e33" index="1" name="suppressed" uom="unitless" value="false">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="ae224761e9b0ac98" group="sensor" id="c8ae346bb96fb35d" index="1" name="upper" uom="unitless" value="2030.0">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="hg624761e9b0ac98" group="sensor" id="66r76f3da0be870e" index="1" name="active" uom="unitless" value="Y">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                        </element>
+                        <element def_id="3261cea62e78ba3f" group="sensor" id="63bf3650dfea710e" index="3" name="element" uom="unitless" value="/msc/mr/monitoring/table_element/instance-xml-2.0/11/1002">
+                            <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            <element def_id="27feda44b963426e" group="sensor" id="ea3a4223bb82c948" index="1" name="lower" uom="unitless" value="1.0">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="83446a9897e5bca4" group="sensor" id="159558b080ee7f4" index="1" name="multiplier" uom="unitless" value="1.0">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="2487864a5ac2a245" group="sensor" id="fbc1303bcbe38beb" index="1" name="offset" uom="unitless" value="0.0">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="93e8ba29b4289f04" group="sensor" id="326b4f9a7f3e4641" index="1" name="suppressed" uom="unitless" value="false">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="ae224761e9b0ac98" group="sensor" id="41d4a0081c6d8185" index="1" name="upper" uom="unitless" value="366.0">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="hg624761e9b0ac98" group="sensor" id="66r76f3da0be870e" index="1" name="active" uom="unitless" value="Y">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                        </element>
+                        <element def_id="3261cea62e78ba3f" group="sensor" id="69410f5bfeb73a5d" index="4" name="element" uom="unitless" value="/msc/mr/monitoring/table_element/instance-xml-2.0/11/1003">
+                            <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            <element def_id="27feda44b963426e" group="sensor" id="2f7deadda8c0f704" index="1" name="lower" uom="unitless" value="0.0">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="83446a9897e5bca4" group="sensor" id="6f39814c444b53b4" index="1" name="multiplier" uom="unitless" value="1.0">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="2487864a5ac2a245" group="sensor" id="36699d2d87300209" index="1" name="offset" uom="unitless" value="0.0">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="93e8ba29b4289f04" group="sensor" id="bc3816976bb4a4a2" index="1" name="suppressed" uom="unitless" value="false">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="ae224761e9b0ac98" group="sensor" id="b1efbd8830874da5" index="1" name="upper" uom="unitless" value="2359.0">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="hg624761e9b0ac98" group="sensor" id="66r76f3da0be870e" index="1" name="active" uom="unitless" value="Y">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                        </element>
+                        <element def_id="3261cea62e78ba3f" group="sensor" id="c7b5af7436d5ca7d" index="5" name="element" uom="unitless" value="/msc/mr/monitoring/table_element/instance-xml-2.0/11/1005">
+                            <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            <element def_id="27feda44b963426e" group="sensor" id="bf465201b0e3ce90" index="1" name="lower" uom="unitless" value="-999.0">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="83446a9897e5bca4" group="sensor" id="83ce59643fe71ad0" index="1" name="multiplier" uom="unitless" value="1.0">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="2487864a5ac2a245" group="sensor" id="30efe066e4ef2102" index="1" name="offset" uom="unitless" value="0.0">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="93e8ba29b4289f04" group="sensor" id="480155b6f80232b2" index="1" name="suppressed" uom="unitless" value="false">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="ae224761e9b0ac98" group="sensor" id="2c55ca51e04f45f8" index="1" name="upper" uom="unitless" value="9999.0">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="hg624761e9b0ac98" group="sensor" id="66r76f3da0be870e" index="1" name="active" uom="unitless" value="Y">
+                                <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                        </element>
+                        <element def_id="fec91b2f06f649ec" group="product_flag" id="30e5929ed0e45373" index="1" name="cs" uom="unitless" value="false">
+                            <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                        </element>
+                        <element def_id="32c9fc5ed0165688" group="product_flag" id="564c2e1413b110ef" index="1" name="hourly" uom="unitless" value="false">
+                            <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                        </element>
+                        <element def_id="b28a263f7df34a5e" group="product_flag" id="5408552291c99ae2" index="1" name="synoptic" uom="unitless" value="false">
+                            <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                        </element>
+                        <element def_id="15882cc58236e91d" group="product_flag" id="7ab411af9b1210e8" index="1" name="sx" uom="unitless" value="false">
+                            <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                        </element>
+                        <element def_id="42c9fc5ed0165688" group="product_flag" id="7e4aa59c96a43454" index="1" name="minutely" uom="unitless" value="false">
+                            <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                        </element>
+                        <element def_id="15828cc58236e91d" group="status" id="f8c028582abc82d3" index="1" name="table_status" uom="unitless" value="active">
+                            <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                        </element>
+                        <element def_id="67c9fc5ed0165688" group="information" id="8o4aa59c96a43454" index="1" name="table_output" uom="unitless" value="mandatory">
+                            <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                        </element>
+                        <element def_id="38g9fc5ed0165688" group="information" id="6h4ka59c96a43454" index="1" name="table_frequency" uom="unitless" value="100">
+                            <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                            <language name="en" value="Daily"/>
+                        </element>
+                        <element def_id="89htr45ed017j5f8" group="information" id="cver459c9op5d454" index="1" name="unaltered_template" uom="unitless" value="N">
+                            <element def_id="nmr934m23asjd327" group="information" id="m34832mwq134sdf3" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="mqwme8332n47a12a" group="information" id="m43549123nszdn83" index="1" name="writable" uom="unitless" value="true"/>
+                        </element>
+                    </element>
+                    <element def_id="69b8c0647989e125" group="identification" id="1a136e7ec40182e1" index="1" name="table_id" uom="unitless" value="11">
+                        <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                        <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                        <element def_id="3261cea62e78ba3f" group="sensor" id="eeef2fe443e2a07c" index="1" name="element" uom="unitless" value="/msc/mr/monitoring/table_element/instance-xml-2.0/11/1001">
+                            <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            <element def_id="27feda44b963426e" group="sensor" id="301e7fb7a43f3128" index="1" name="lower" uom="unitless" value="11.0">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="83446a9897e5bca4" group="sensor" id="8a444536f06d5d58" index="1" name="multiplier" uom="unitless" value="1.0">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="2487864a5ac2a245" group="sensor" id="25acbb355074b68" index="1" name="offset" uom="unitless" value="0.0">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="93e8ba29b4289f04" group="sensor" id="2307ea7f43678a" index="1" name="suppressed" uom="unitless" value="false">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="ae224761e9b0ac98" group="sensor" id="11f76f3da0be870e" index="1" name="upper" uom="unitless" value="11.0">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="hg624761e9b0ac98" group="sensor" id="66r76f3da0be870e" index="1" name="active" uom="unitless" value="Y">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                        </element>
+                        <element def_id="3261cea62e78ba3f" group="sensor" id="c0210e36bf60c388" index="2" name="element" uom="unitless" value="/msc/mr/monitoring/table_element/instance-xml-2.0/11/1004">
+                            <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            <element def_id="27feda44b963426e" group="sensor" id="1aca727286c07104" index="1" name="lower" uom="unitless" value="2004.0">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="83446a9897e5bca4" group="sensor" id="6c82f2eb7e048da1" index="1" name="multiplier" uom="unitless" value="1.0">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="2487864a5ac2a245" group="sensor" id="8e95dacdc53cb62a" index="1" name="offset" uom="unitless" value="0.0">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="93e8ba29b4289f04" group="sensor" id="5b0e3ca89895555e" index="1" name="suppressed" uom="unitless" value="false">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="ae224761e9b0ac98" group="sensor" id="b6a5b2e4966794c7" index="1" name="upper" uom="unitless" value="2030.0">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="hg624761e9b0ac98" group="sensor" id="66r76f3da0be870e" index="1" name="active" uom="unitless" value="Y">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                        </element>
+                        <element def_id="3261cea62e78ba3f" group="sensor" id="2e5a9b8dd40e67d" index="3" name="element" uom="unitless" value="/msc/mr/monitoring/table_element/instance-xml-2.0/11/1002">
+                            <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            <element def_id="27feda44b963426e" group="sensor" id="aa5bfcbb076025de" index="1" name="lower" uom="unitless" value="1.0">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="83446a9897e5bca4" group="sensor" id="41257b1b29106c97" index="1" name="multiplier" uom="unitless" value="1.0">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="2487864a5ac2a245" group="sensor" id="347a774aab99fe47" index="1" name="offset" uom="unitless" value="0.0">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="93e8ba29b4289f04" group="sensor" id="db3d12d6062e1b1a" index="1" name="suppressed" uom="unitless" value="false">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="ae224761e9b0ac98" group="sensor" id="b7764982ac5f2f67" index="1" name="upper" uom="unitless" value="366.0">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="hg624761e9b0ac98" group="sensor" id="66r76f3da0be870e" index="1" name="active" uom="unitless" value="Y">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                        </element>
+                        <element def_id="3261cea62e78ba3f" group="sensor" id="ff9619581e9f47e8" index="4" name="element" uom="unitless" value="/msc/mr/monitoring/table_element/instance-xml-2.0/11/1003">
+                            <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            <element def_id="27feda44b963426e" group="sensor" id="2b052def4cc1d756" index="1" name="lower" uom="unitless" value="0.0">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="83446a9897e5bca4" group="sensor" id="7a7c3b67fc6fac57" index="1" name="multiplier" uom="unitless" value="1.0">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="2487864a5ac2a245" group="sensor" id="5671d28ce0d6518f" index="1" name="offset" uom="unitless" value="0.0">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="93e8ba29b4289f04" group="sensor" id="db1a9a589153931c" index="1" name="suppressed" uom="unitless" value="false">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="ae224761e9b0ac98" group="sensor" id="2831e3c46fbf0404" index="1" name="upper" uom="unitless" value="2359.0">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="hg624761e9b0ac98" group="sensor" id="66r76f3da0be870e" index="1" name="active" uom="unitless" value="Y">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                        </element>
+                        <element def_id="3261cea62e78ba3f" group="sensor" id="ff40be3c524ab7c9" index="5" name="element" uom="unitless" value="/msc/mr/monitoring/table_element/instance-xml-2.0/11/1005">
+                            <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            <element def_id="27feda44b963426e" group="sensor" id="85eb21c7f6d5ee2f" index="1" name="lower" uom="unitless" value="-999.0">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="83446a9897e5bca4" group="sensor" id="a1940ca615f2e950" index="1" name="multiplier" uom="unitless" value="1.0">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="2487864a5ac2a245" group="sensor" id="945bed87da80557c" index="1" name="offset" uom="unitless" value="0.0">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="93e8ba29b4289f04" group="sensor" id="fa395b1f367a03f8" index="1" name="suppressed" uom="unitless" value="false">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="ae224761e9b0ac98" group="sensor" id="e0142863b59cd0c2" index="1" name="upper" uom="unitless" value="9999.0">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                            <element def_id="hg624761e9b0ac98" group="sensor" id="66r76f3da0be870e" index="1" name="active" uom="unitless" value="Y">
+                                <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                                <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            </element>
+                        </element>
+                        <element def_id="fec91b2f06f649ec" group="product_flag" id="422197ea143b17e5" index="1" name="cs" uom="unitless" value="false">
+                            <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                        </element>
+                        <element def_id="32c9fc5ed0165688" group="product_flag" id="6d4aa59c96a43454" index="1" name="hourly" uom="unitless" value="true">
+                            <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                        </element>
+                        <element def_id="b28a263f7df34a5e" group="product_flag" id="7f32ae45fbbc057d" index="1" name="synoptic" uom="unitless" value="true">
+                            <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                        </element>
+                        <element def_id="15882cc58236e91d" group="product_flag" id="f8c028852abc82d3" index="1" name="sx" uom="unitless" value="false">
+                            <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                        </element>
+                        <element def_id="42c9fc5ed0165688" group="product_flag" id="7e4aa59c96a43454" index="1" name="minutely" uom="unitless" value="false">
+                            <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                        </element>
+                        <element def_id="15828cc58236e91d" group="status" id="f8c028582abc82d3" index="1" name="table_status" uom="unitless" value="active">
+                            <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                        </element>
+                        <element def_id="67c9fc5ed0165688" group="information" id="8o4aa59c96a43454" index="1" name="table_output" uom="unitless" value="mandatory">
+                            <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                        </element>
+                        <element def_id="38g9fc5ed0165688" group="information" id="6h4ka59c96a43454" index="1" name="table_frequency" uom="unitless" value="10">
+                            <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                            <element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+                            <language name="en" value="Hourly"/>
+                        </element>
+                        <element def_id="89htr45ed017j5f8" group="information" id="cver459c9op5d454" index="1" name="unaltered_template" uom="unitless" value="N">
+                            <element def_id="smkdk393n5453s21" group="information" id="mwqe732bdf234321" index="1" name="data_source" uom="unitless" value="JICC"/>
+                    		<element def_id="me9w32nn4rrty232" group="information" id="n464327bsen45212" index="1" name="writable" uom="unitless" value="true"/>
+						</element>
+                    </element>
+                </elements>
+            </om:result>
+        </om:Metadata>
+    </om:member>
+</om:MetadataCollection>

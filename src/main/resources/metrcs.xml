@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<om:MetadataCollection xmlns:om="http://www.opengis.net/om/1.0" xmlns="http://dms.ec.gc.ca/schema/metadata/1.0" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <om:member>
+        <om:Metadata>
+            <om:metadata>
+                <set>
+                    <general>
+                        <dataset name="/msc/metobject/rcs/instance-xml-2.0"/>
+                        <id xlink:href="/metadata/msc/metobject/rcs/instance-xml-2.0/aspc?version=1.0"/>
+                        <parent xlink:href="/metadata/msc/metobject/rcs/definition-xml-2.0/1.0"/>
+                    </general>
+                    <identification-elements>
+                        <identification-element group="history" name="active_flag" value="true"/>
+                        <identification-element group="history" name="creation_datetime" uom="datetime" value="2016-04-22T00:00:00.000Z"/>
+                        <identification-element group="history" name="version" value="1.0"/>
+                        <identification-element group="history" name="system_generated" value="false"/>
+                        <identification-element group="history" name="eff_start_datetime" uom="datetime" value="2016-04-22T00:00:00.000Z"/>
+                        <identification-element group="history" name="created_by" value="colinm"/>
+                        <identification-element group="history" name="reason_for_change" value="first version"/>
+                    </identification-elements>
+                </set>
+            </om:metadata>
+            <om:result>
+                <elements>
+                    <element group="instance_list" name="root-instance-taxonomy" uom="unitless" value="/msc/message_configuration" />
+                    <element group="id" name="identity" uom="unitless" value="rcs user identity" >
+                        <element group="id" index="1" name="identity-type" uom="unitless" value="CONST" >
+                            <element group="id" index="1" name="identity-value" uom="unitless" value="msc" />
+                        </element>
+                        <element group="id" index="2" name="identity-type" uom="unitless" value="CONST" >
+                            <element group="id" index="1" name="identity-value" uom="unitless" value="metadata" />
+                        </element>
+                        <element group="id" index="3" name="identity-type" uom="unitless" value="CONST" >
+                            <element group="id" index="1" name="identity-value" uom="unitless" value="metobject" />
+                        </element>
+                        <element group="id" index="4" name="identity-type" uom="unitless" value="CONST" >
+                            <element group="id" index="1" name="identity-value" uom="unitless" value="rcs" />
+                        </element>
+                        <element group="id" index="5" name="identity-type" uom="unitless" value="CONST" >
+                            <element group="id" index="1" name="identity-value" uom="unitless" value="csv-1.0-ascii" />
+                        </element>
+                        <element group="id" index="6" name="identity-type" uom="unitless" value="CONST" >
+                            <element group="id" index="1" name="identity-value" uom="unitless" value="product-csv-1.0" />
+                        </element>
+                        <element group="id" index="7" name="identity-type" uom="unitless" value="CURRENT_DATE" >
+                            <element group="id" index="1" name="identity-value" uom="unitless" value="yyyyMMddHHmmss" />
+                        </element>
+                    </element>
+                    <element group="token" name="token-name" index="1" uom="unitless" value="created_const" >
+                        <element group="token" name="token-type" index="1" uom="unitless" value="CONST" />
+                        <element group="token" name="token-value" index="1" uom="unitless" value="#Create date: " />
+                    </element>
+                    <element group="token" name="token-name" index="2" uom="unitless" value="created_date" >
+                        <element group="token" name="token-type" index="1" uom="unitless" value="CURRENT_DATE" />
+                        <element group="token" name="token-value" index="1" uom="unitless" value="yyyy-mm-dd" />
+                    </element>
+                    <element group="token" name="token-name" index="3" uom="unitless" value="header" >
+                        <element group="token" name="token-type" index="1" uom="unitless" value="CONST" />
+                        <element group="token" name="token-value" index="1" uom="unitless" value="\nRSC ID|name_en|name_fr|user\n" />
+                    </element>
+                </elements>
+            </om:result>
+        </om:Metadata>
+    </om:member>
+</om:MetadataCollection>

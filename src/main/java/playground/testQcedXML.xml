@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<om:ObservationCollection xmlns="http://dms.ec.gc.ca/schema/point-observation/2.0" xmlns:gml="http://www.opengis.net/gml" xmlns:om="http://www.opengis.net/om/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <om:member>
+        <om:Observation>
+            <om:metadata>
+                <set>
+                    <general>
+                        <author build="build.1" name="MSC-DMS NC-AWOS Decoder" version="0.5"/>
+                        <dataset name="nav_canada/observation/atmospheric/surface_weather/awos-1.0-binary"/>
+                        <phase name="quality_controlled-xml-2.0"/>
+                        <id xlink:href="/data/nav_canada/observation/atmospheric/surface_weather/awos-1.0-binary/quality_controlled-xml-2.0/200903020000/cyah"/>
+                        <parent xlink:href="/data/bulletins/spcn61/cyyt/200903051720/1238565896390"/>
+                    </general>
+                    <identification-elements>
+                        <element group="identification" name="aviation_product_status" uom="unitless" value="0"/>
+                        <element group="identification" name="special-msg-indicator" uom="unitless" value="no"/>
+                        <element group="identification" name="WMO-id" uom="unitless" value="7171"/>
+                        <element group="identification" name="ICAO-station-id" uom="unitless" value="CYAY"/>
+                        <element code-src="WMO_BUFR" code-type="010011" group="identification" name="hourly-observation-supplementary-type" uom="code" value="4"/>
+                    </identification-elements>
+                </set>
+            </om:metadata>
+            <om:samplingTime>
+                <gml:TimeInstant>
+                    <gml:timePosition>2009-03-02T00:00:00.000Z</gml:timePosition>
+                </gml:TimeInstant>
+            </om:samplingTime>
+            <om:resultTime>
+                <gml:TimeInstant>
+                    <gml:timePosition>2009-03-02T00:01:19.000Z</gml:timePosition>
+                </gml:TimeInstant>
+            </om:resultTime>
+            <om:procedure xlink:href="/station/icao/cyah/auto"/>
+            <om:observedProperty gml:remoteSchema="/schema/point-observation/2.0.xsd"/>
+            <om:featureOfInterest>
+                <gml:FeatureCollection>
+                    <gml:location>
+                        <gml:Point>
+                            <gml:pos>51.39 -56.08</gml:pos>
+                        </gml:Point>
+                    </gml:location>
+                </gml:FeatureCollection>
+            </om:featureOfInterest>
+            <om:result>
+                <orig-header>ISAA61 CYAY 020000</orig-header>
+                <orig-msg xlink:href="http://dms.ec.gc.ca/data/1234567890">METAR 763KM</orig-msg>
+                <elements>
+                    <element group="pressure" name="station_pressure" uom="Pa" value="102830.0">
+                        <quality-controlled>
+                            <element group="assessment" name="overall_qa_summary" uom="unitless" value="100"/>
+                            <native>
+                                <qualifier group="quality" name="suspect" uom="unitless" value="N"/>
+                                <qualifier group="value" name="suppressed" uom="unitless" value="N"/>
+                            </native>
+                            <standardized resultFlag="100" resultValue="Accepted/Passed"/>
+                        </quality-controlled>
+                    </element>
+                    <element group="pressure" name="mean_sea_level" uom="Pa" value="103260.0">
+                        <quality-controlled>
+                            <native>
+                                <qualifier group="quality" name="suspect" uom="unitless" value="N"/>
+                                <qualifier group="value" name="suppressed" uom="unitless" value="N"/>
+                            </native>
+                            <standardized resultFlag="100" resultValue="Accepted/Passed"/>
+                        </quality-controlled>
+                    </element>
+                    <element group="pressure" name="tendency_amount" uom="Pa" value="MSNG">
+                        <qualifier group="element" name="statistical_significance" uom="unitless" value="differential"/>
+                        <qualifier group="element" name="time_displacement" uom="h" value="-3"/>
+                        <qualifier group="element" name="time_duration" uom="h" value="3"/>
+                        <quality-controlled>
+                            <native>
+                                <qualifier group="quality" name="suspect" uom="unitless" value="N"/>
+                                <qualifier group="value" name="suppressed" uom="unitless" value="N"/>
+                            </native>
+                            <standardized resultFlag="100" resultValue="Accepted/Passed"/>
+                            <real-time resultFlag="100" resultValue="Accepted/Passed">
+                                <qc-tests resultFlag="100" resultValue="Accepted/Passed" type="presence">
+                                    <qc-rule id="PR_1" resultFlag="100" resultValue="Accepted/Passed" xlink:href="http://dms.ec.gc.ca/qc-rules/1"/>
+                                    <qc-rule id="PR_2" resultFlag="100" resultValue="Accepted/Passed" xlink:href="http://dms.ec.gc.ca/qc-rules/2"/>
+                                </qc-tests>
+                                <qc-tests resultFlag="100" resultValue="Accepted/Passed" type="integrity">
+                                    <qc-rule id="IN_1" resultFlag="100" resultValue="Accepted/Passed" xlink:href="http://dms.ec.gc.ca/qc-rules/1"/>
+                                </qc-tests>
+                            </real-time>
+                        </quality-controlled>
+                    </element>
+                    <element code-src="WMO_BUFR" code-type="010063" group="pressure" name="tendency_characteristic" uom="code" value="MSNG">
+                        <qualifier group="element" name="statistical_significance" uom="unitless" value="trend"/>
+                        <qualifier group="element" name="time_displacement" uom="h" value="-3"/>
+                        <qualifier group="element" name="time_duration" uom="h" value="3"/>
+                        <remark>Section 0</remark>
+                        <quality-controlled>
+                            <element group="assessment" name="overall_qa_summary" value="10" uom="unitless"/>
+                            <native>
+                                <qualifier group="quality" name="suspect" value="N" uom="unitless"/>
+                                <qualifier group="value" name="suppressed" value="N" uom="unitless"/>
+                                <qualifier group="quality" name="error" value="N" uom="unitless"/>
+                            </native>
+                            <standardized resultFlag="100" resultValue="Accepted/Passed"/>
+                            <real-time>
+                                <element group="assessment" name="qa_summary" value="100" uom="unitless">
+                                    <element group="assessment" name="presence_summary" value="0" uom="unitless"/>
+                                    <element group="assessment" name="integrity_summary" value="1" uom="unitless"/>
+                                    <element group="assessment" name="range_summary" value="2" uom="unitless"/>
+                                    <element group="assessment" name="spatial_summary" value="3" uom="unitless"/>
+                                    <element group="assessment" name="temporal_summary" uom="unitless" value="101">
+                                        <element group="assessment" name="temporal_step" uom="unitless" value="/metadata/msc/qa_rule/temporal_step/decoded-xml-1.0/886">
+                                            <qualifier group="element" name="code" uom="unitless" value="9004"/>
+                                            <qualifier group="element" name="flag_value" uom="unitless" value="101"/>
+                                            <qualifier group="reference" name="ruleset" uom="unitless" value="/metadata/msc/qa_ruleset/msc/observation/atmospheric/surface_weather/ca-1.0-ascii/meta_product-xml-1.0/station/all/10010000/level_1"/>
+                                        </element>
+                                        <element group="assessment" name="temporal_step" uom="unitless" value="/metadata/msc/qa_rule/temporal_step/decoded-xml-1.0/887">
+                                            <qualifier group="element" name="code" uom="unitless" value="9004"/>
+                                            <qualifier group="element" name="flag_value" uom="unitless" value="101"/>
+                                            <qualifier group="reference" name="ruleset" uom="unitless" value="/metadata/msc/qa_ruleset/msc/observation/atmospheric/surface_weather/ca-1.0-ascii/meta_product-xml-1.0/station/all/10010000/level_1"/>
+                                        </element>
+                                    </element>
+                                </element>
+                            </real-time>
+                            <status-indicators>
+                                <element group="data_characteristic" name="quality_control" value="4" uom="code" code-src="std_code_src" code-type="quality_control"/>
+                                <element group="data_characteristic" name="qa_flag_override" value="5" uom="code" code-src="std_code_src" code-type="qa_flag_override"/>
+                            </status-indicators>
+                        </quality-controlled>
+                        <supplementary-info>
+                            <element group="classification" name="data_type" value="0" uom="code" code-src="std_code_src" code-type="data_type"/>
+                            <element group="data_characteristic" name="data_flag" value="4" uom="code" code-src="std_code_src" code-type="data_flags"/>
+                        </supplementary-info>
+                    </element>
+                </elements>
+            </om:result>
+        </om:Observation>
+    </om:member>
+</om:ObservationCollection>

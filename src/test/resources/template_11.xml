@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<om:MetadataCollection xmlns:om="http://www.opengis.net/om/1.0" xmlns="http://dms.ec.gc.ca/schema/metadata/1.0" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <om:member>
+        <om:Metadata>
+            <om:metadata>
+                <set>
+                    <general>
+                        <dataset name="/msc/mr/monitoring/table_configuration_template/instance-xml-2.0"/>
+                        <id xlink:href="/metadata/msc/mr/monitoring/table_configuration_template/instance-xml-2.0/11?version=1.0"/>
+                        <parent xlink:href="/metadata/msc/mr/monitoring/table_configuration_template/definition-xml-2.0/1.0"/>
+                    </general>
+                    <identification-elements>
+                        <identification-element group="history" name="active_flag" value="true"/>
+                        <identification-element group="history" name="creation_datetime" uom="datetime" value="2016-08-20T00:24:25.539Z"/>
+                        <identification-element group="history" name="version" value="1.0"/>
+                        <identification-element group="history" name="system_generated" value="false"/>
+                        <identification-element group="history" name="eff_start_datetime" uom="datetime" value="2016-08-19T18:52:00.000Z"/>
+                        <identification-element group="history" name="created_by" value="tammy"/>
+                        <identification-element group="history" name="reason_for_change" value="sample staci template xml created"/>
+                    </identification-elements>
+                </set>
+            </om:metadata>
+            <om:result>
+                <elements>
+                    <element def_id="35b8c0642389n825" group="identification" id="1q236fdg540182e1" index="1" name="template_id" uom="unitless" value="1"/>
+                    <element def_id="69b8c0647989e125" group="identification" id="1a136e7ec40182e1" index="1" name="table_id" uom="unitless" value="11"/>
+                    <element def_id="fec91b2f06f649ec" group="classification" id="422197ea143b17e5" index="1" name="template_type" uom="unitless" value="National">
+						<language name="en" value="National Table Template"/>
+					</element>
+                    <element def_id="jhh91b2f06f649ec" group="information" id="467s97ea143b17e5" index="1" name="template_name" uom="unitless" value="Table 11 National Template"/>
+                    <element def_id="h87j1b2f06f649ec" group="information" id="78df97ea143b17e5" index="1" name="template_description" uom="unitless" value="National template designed for adding table 11 to a station."/>
+                    <element def_id="64erfb2f06f649ec" group="information" id="jkhh23ea143b17e5" index="1" name="data_provider" uom="unitless" value="MSC">
+						<language name="en" value="Meteorological Service of Canada"/>
+						<language name="fr" value="Service météorologique du Canada"/>
+					</element>
+                    <element def_id="67c9fc5ed0165688" group="information" id="8o4aa59c96a43454" index="1" name="table_output" uom="unitless" value="mandatory"/>
+                    <element def_id="38g9fc5ed0165688" group="information" id="6h4ka59c96a43454" index="1" name="table_frequency" uom="unitless" value="10">
+						<language name="en" value="Hourly"/>
+					</element>
+                    <element def_id="42c9fc5ed0165688" group="product_flag" id="7e4aa59c96a43454" index="1" name="minutely" uom="unitless" value="false"/>
+                    <element def_id="32c9fc5ed0165688" group="product_flag" id="6d4aa59c96a43454" index="1" name="hourly" uom="unitless" value="true"/>
+                    <element def_id="oiu8765ed0165688" group="product_flag" id="kju9a59c96a43454" index="1" name="synoptic" uom="unitless" value="true"/>
+                    <element def_id="3261cea62e78ba3f" group="sensor" id="eeef2fe443e2a07c" index="1" name="element" uom="unitless" value="/msc/staci/monitoring/element/instance-xml-2.0/11/1001">
+                        <element def_id="83446a9897e5bca4" group="sensor" id="8a444536f06d5d58" index="1" name="multiplier" uom="unitless" value="1.0"/>
+                        <element def_id="2487864a5ac2a245" group="sensor" id="25acbb355074b68" index="1" name="offset" uom="unitless" value="0.0"/>
+                        <element def_id="hg624761e9b0ac98" group="sensor" id="66r76f3da0be870e" index="1" name="active" uom="unitless" value="Y"/>
+                    </element>
+                    <element def_id="3261cea62e78ba3f" group="sensor" id="c0210e36bf60c388" index="2" name="element" uom="unitless" value="/msc/staci/monitoring/element/instance-xml-2.0/11/1004">
+                        <element def_id="83446a9897e5bca4" group="sensor" id="6c82f2eb7e048da1" index="1" name="multiplier" uom="unitless" value="1.0"/>
+                        <element def_id="2487864a5ac2a245" group="sensor" id="8e95dacdc53cb62a" index="1" name="offset" uom="unitless" value="0.0"/>
+                        <element def_id="hg624761e9b0ac98" group="sensor" id="66r76f3da0be870e" index="1" name="active" uom="unitless" value="Y"/>
+                    </element>
+                    <element def_id="3261cea62e78ba3f" group="sensor" id="2e5a9b8dd40e67d" index="3" name="element" uom="unitless" value="/msc/staci/monitoring/element/instance-xml-2.0/11/1002">
+                        <element def_id="83446a9897e5bca4" group="sensor" id="41257b1b29106c97" index="1" name="multiplier" uom="unitless" value="1.0"/>
+                        <element def_id="2487864a5ac2a245" group="sensor" id="347a774aab99fe47" index="1" name="offset" uom="unitless" value="0.0"/>
+                        <element def_id="hg624761e9b0ac98" group="sensor" id="66r76f3da0be870e" index="1" name="active" uom="unitless" value="Y"/>
+                    </element>
+                    <element def_id="3261cea62e78ba3f" group="sensor" id="ff9619581e9f47e8" index="4" name="element" uom="unitless" value="/msc/staci/monitoring/element/instance-xml-2.0/11/1003">
+                        <element def_id="83446a9897e5bca4" group="sensor" id="7a7c3b67fc6fac57" index="1" name="multiplier" uom="unitless" value="1.0"/>
+                        <element def_id="2487864a5ac2a245" group="sensor" id="5671d28ce0d6518f" index="1" name="offset" uom="unitless" value="0.0"/>
+                        <element def_id="hg624761e9b0ac98" group="sensor" id="66r76f3da0be870e" index="1" name="active" uom="unitless" value="Y"/>
+                    </element>
+                    <element def_id="3261cea62e78ba3f" group="sensor" id="ff40be3c524ab7c9" index="5" name="element" uom="unitless" value="/msc/staci/monitoring/element/instance-xml-2.0/11/1005">
+                        <element def_id="83446a9897e5bca4" group="sensor" id="a1940ca615f2e950" index="1" name="multiplier" uom="unitless" value="1.0"/>
+                        <element def_id="2487864a5ac2a245" group="sensor" id="945bed87da80557c" index="1" name="offset" uom="unitless" value="0.0"/>
+                        <element def_id="hg624761e9b0ac98" group="sensor" id="66r76f3da0be870e" index="1" name="active" uom="unitless" value="Y"/>
+                    </element>
+                    <element def_id="15828cc58236e91d" group="status" id="f8c028582abc82d3" index="1" name="template_status" uom="unitless" value="active"/>
+                </elements>
+            </om:result>
+        </om:Metadata>
+    </om:member>
+</om:MetadataCollection>
