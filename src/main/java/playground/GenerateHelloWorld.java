@@ -1,21 +1,21 @@
 /*
- * Name   : GenerateHelloWorld.java
+ * Name : GenerateHelloWorld.java
  * Author : AdrianF
  * Created: 2013-09-12
  */
 package playground;
 
+import java.io.File;
+import java.nio.charset.StandardCharsets;
+
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import java.io.File;
-
-
 /**
  * Generates the playground/HelloWorld.java file in the target/generated-sources/dms
  *
- * @author  AdrianF
+ * @author AdrianF
  */
 public class GenerateHelloWorld {
 
@@ -41,9 +41,8 @@ public class GenerateHelloWorld {
     }
 
     /**
-     * @param   args
-     *
-     * @throws  Exception  on any exception
+     * @param args
+     * @throws Exception on any exception
      */
     public static void main(String[] args) throws Exception {
         StringBuffer java = new StringBuffer();
@@ -55,7 +54,8 @@ public class GenerateHelloWorld {
         java.append("    }\n");
         java.append("}\n");
 
-        FileUtils.write(new File("target/generated-sources/dms/playground/HelloWorld.java"), java.toString());
+        FileUtils.write(new File("target/generated-sources/dms/playground/HelloWorld.java"), java.toString(),
+                StandardCharsets.UTF_8);
     }
 
     /*

@@ -1,16 +1,12 @@
 /*
- * Name   : XPathTester.java
+ * Name : XPathTester.java
  * Author : Adrian Francisco
  * Created: 2015-07-24
  */
 package playground;
 
-import org.apache.commons.io.IOUtils;
-
-import org.w3c.dom.Document;
-
 import java.io.ByteArrayInputStream;
-
+import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
 
 import javax.xml.XMLConstants;
@@ -20,24 +16,26 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathFactory;
 
+import org.apache.commons.io.IOUtils;
+import org.w3c.dom.Document;
 
 /**
  * All things XPath.
- *
- * <p>XPath works nice an easy when the XML is simple. However; once you start working with more complicated XMLs with
+ * <p>
+ * XPath works nice an easy when the XML is simple. However; once you start working with more complicated XMLs with
  * one or more namespaces, XPath gets pretty funny. Recommend reading this article:
- * http://www.ibm.com/developerworks/library/x-nmspccontext</p>
+ * http://www.ibm.com/developerworks/library/x-nmspccontext
+ * </p>
  *
- * @author  Adrian Francisco
+ * @author Adrian Francisco
  */
 public class XPathTester {
 
     /**
      * The main method.
      *
-     * @param   args  the args
-     *
-     * @throws  Exception  on any exception
+     * @param args the args
+     * @throws Exception on any exception
      */
     public static void main(String[] args) throws Exception {
 
@@ -66,15 +64,13 @@ public class XPathTester {
     /**
      * Evaluate the xpath for the given filename and expression.
      *
-     * @param   filename    the filename
-     * @param   expression  the expression
-     *
-     * @return  the xpath value; empty string otherwise
-     *
-     * @throws  Exception  on any exception
+     * @param filename the filename
+     * @param expression the expression
+     * @return the xpath value; empty string otherwise
+     * @throws Exception on any exception
      */
     private static String evaluate(String filename, String expression) throws Exception {
-        String xml = IOUtils.toString(XPathTester.class.getResourceAsStream("/" + filename));
+        String xml = IOUtils.toString(XPathTester.class.getResourceAsStream("/" + filename), StandardCharsets.UTF_8);
 
         DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
 
@@ -108,7 +104,7 @@ public class XPathTester {
         /**
          * Creates a new object.
          *
-         * @param  document  the document
+         * @param document the document
          */
         public UniversalNamespaceContext(Document document) {
             this.document = document;
