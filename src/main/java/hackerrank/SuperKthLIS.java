@@ -3,7 +3,7 @@
  * Author : Adrian Francisco
  * Created: Jan 19, 2017
  */
-package playground;
+package hackerrank;
 
 import java.util.ArrayList;
 import java.util.Collections;

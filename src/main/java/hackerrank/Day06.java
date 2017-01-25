@@ -1,4 +1,4 @@
-package playground;
+package hackerrank;
 
 import java.util.ArrayList;
 import java.util.Scanner;

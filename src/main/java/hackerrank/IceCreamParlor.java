@@ -1,4 +1,4 @@
-package playground;
+package hackerrank;
 
 /**
  * The Ice Cream Parlor: https://www.hackerrank.com/challenges/icecream-parlor

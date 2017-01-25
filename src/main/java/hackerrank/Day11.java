@@ -3,7 +3,7 @@
  * Author : Adrian Francisco
  * Created: Jan 24, 2017
  */
-package playground;
+package hackerrank;
 
 import java.io.ByteArrayInputStream;
 import java.util.Scanner;
