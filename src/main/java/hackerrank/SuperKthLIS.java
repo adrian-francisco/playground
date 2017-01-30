@@ -5,6 +5,9 @@
  */
 package hackerrank;
 
+import static org.junit.Assert.assertEquals;
+
+import java.io.ByteArrayInputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -15,6 +18,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
+import org.junit.Test;
+
 /**
  * Super Kth LIS: https://www.hackerrank.com/challenges/super-kth-lis
  *
@@ -22,27 +27,40 @@ import java.util.logging.SimpleFormatter;
  */
 public class SuperKthLIS {
 
-    /**
-     * Level.ALL during debugging, Level.OFF during submission.
-     */
-    private static final Level LOG_LEVEL = Level.OFF;
+    /** The logger. */
+    private static final Logger LOG = Logger.getLogger(SuperKthLIS.class.getName());
+
+    /** The result. */
+    private static String result;
+
+    static {
+        System.setProperty("java.util.logging.SimpleFormatter.format", "%5$s%6$s%n");
+    }
 
     /**
      * The main method.
      *
      * @param args the arguments
      */
-    public static void main(String[] args) {
-        System.setProperty("java.util.logging.SimpleFormatter.format", "%5$s%6$s%n");
-        Logger log = Logger.getLogger(SuperKthLIS.class.getName());
-        log.setLevel(LOG_LEVEL);
+    public static void main(String... args) {
+        Level level = Level.OFF;
+
+        if (args.length > 0) {
+            level = Level.FINE;
+        }
+
         ConsoleHandler handler = new ConsoleHandler();
+
         SimpleFormatter formatter = new SimpleFormatter();
         handler.setFormatter(formatter);
-        handler.setLevel(LOG_LEVEL);
-        log.addHandler(handler);
+        handler.setLevel(level);
 
-        Scanner scanner = new Scanner(System.in);
+        LOG.setLevel(level);
+        if (LOG.getHandlers().length == 0) {
+            LOG.addHandler(handler);
+        }
+
+        Scanner scanner = new Scanner(System.in, "UTF-8");
 
         int N = scanner.nextInt();
         int K = scanner.nextInt();
@@ -55,15 +73,9 @@ public class SuperKthLIS {
 
         scanner.close();
 
-        // int N = 10;
-        // int K = 3;
-        // // List<Integer> NS = Arrays.asList(0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15);
-        // List<Integer> NS = generate(100);
-        // N = NS.size();
-
-        log.fine("N: " + N);
-        log.fine("K: " + K);
-        log.fine("NS: " + NS);
+        LOG.fine("N: " + N);
+        LOG.fine("K: " + K);
+        LOG.fine("NS: " + NS);
 
         List<List<Integer>> sequences = new ArrayList<>();
         int maxSequence = 0;
@@ -104,28 +116,30 @@ public class SuperKthLIS {
             }
         }
 
-        log.fine("generated sequences: " + sequences.size());
+        LOG.fine("generated sequences: " + sequences.size());
         List<String> sortedMaxSequences = new ArrayList<>();
         for (List<Integer> sequence : sequences) {
-            log.finer(sequence.toString());
+            LOG.finer(sequence.toString());
             if (sequence.size() == maxSequence) {
                 sortedMaxSequences.add(print(sequence));
             }
         }
         Collections.sort(sortedMaxSequences);
 
-        log.fine("sorted and max sequences");
+        LOG.fine("sorted and max sequences:");
         for (String sortedMaxSequence : sortedMaxSequences) {
-            log.fine(sortedMaxSequence);
+            LOG.fine(sortedMaxSequence);
         }
 
-        log.fine("result");
         if (0 < K && K < sortedMaxSequences.size() + 1) {
-            System.out.println(sortedMaxSequences.get(K - 1));
+            result = sortedMaxSequences.get(K - 1);
         }
         else {
-            System.out.println("-1");
+            result = "-1";
         }
+
+        LOG.fine("result:");
+        System.out.println(result);
     }
 
     /**
@@ -170,4 +184,61 @@ public class SuperKthLIS {
         return list.get(list.size() - 1);
     }
 
+    /*
+     **************************************** TEST METHODS **********************************************************
+     */
+
+    /**
+     * Test input 0.
+     *
+     * @throws Exception the exception
+     */
+    @Test
+    public void testInput0() throws Exception {
+        StringBuilder input = new StringBuilder();
+        input.append("5 3\n");
+        input.append("1 3 1 2 5\n");
+
+        System.setIn(new ByteArrayInputStream(input.toString().getBytes("UTF-8")));
+
+        SuperKthLIS.main("log");
+
+        assertEquals("1 3 5", SuperKthLIS.result);
+    }
+
+    /**
+     * Test input 1.
+     *
+     * @throws Exception the exception
+     */
+    @Test
+    public void testInput1() throws Exception {
+        StringBuilder input = new StringBuilder();
+        input.append("5 2\n");
+        input.append("1 3 2 4 5\n");
+
+        System.setIn(new ByteArrayInputStream(input.toString().getBytes("UTF-8")));
+
+        SuperKthLIS.main("log");
+
+        assertEquals("1 3 4 5", SuperKthLIS.result);
+    }
+
+    /**
+     * Test input 2.
+     *
+     * @throws Exception the exception
+     */
+    @Test
+    public void testInput2() throws Exception {
+        StringBuilder input = new StringBuilder();
+        input.append("16 1\n");
+        input.append("0 8 4 12 2 10 6 14 1 9 5 13 3 11 7 15\n");
+
+        System.setIn(new ByteArrayInputStream(input.toString().getBytes("UTF-8")));
+
+        SuperKthLIS.main("log");
+
+        assertEquals("0 2 6 9 11 15", SuperKthLIS.result);
+    }
 }
