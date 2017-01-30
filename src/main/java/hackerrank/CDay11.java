@@ -15,7 +15,7 @@ import org.junit.Test;
  *
  * @author Adrian Francisco
  */
-public class Day11 {
+public class CDay11 {
 
     /*
      **************************************** PUBLIC FIELDS ************************************************************
@@ -32,7 +32,7 @@ public class Day11 {
     /**
      * Creates a new instance of Day11.
      */
-    public Day11() {
+    public CDay11() {
     }
 
     /*
@@ -116,7 +116,7 @@ public class Day11 {
 
         System.setIn(new ByteArrayInputStream(input.toString().getBytes("UTF-8")));
 
-        Day11.main(null);
+        CDay11.main(null);
         System.out.println();
     }
 
@@ -137,7 +137,7 @@ public class Day11 {
 
         System.setIn(new ByteArrayInputStream(input.toString().getBytes("UTF-8")));
 
-        Day11.main(null);
+        CDay11.main(null);
         System.out.println();
     }
 }

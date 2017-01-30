@@ -1,6 +1,6 @@
 package hackerrank;
 
-public class Day17 {
+public class CDay17 {
 
 }
 

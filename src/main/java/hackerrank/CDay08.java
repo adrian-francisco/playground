@@ -10,7 +10,7 @@ import org.junit.Test;
 /**
  * The Class Day8.
  */
-public class Day08 {
+public class CDay08 {
 
     /**
      * My main.
@@ -57,6 +57,6 @@ public class Day08 {
 
         System.setIn(new ByteArrayInputStream(input.toString().getBytes("UTF-8")));
 
-        Day08.main(null);
+        CDay08.main(null);
     }
 }

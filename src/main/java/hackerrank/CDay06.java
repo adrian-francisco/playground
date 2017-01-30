@@ -3,7 +3,7 @@ package hackerrank;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Day06 {
+public class CDay06 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

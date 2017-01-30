@@ -10,7 +10,7 @@ import java.util.Scanner;
 /**
  * The Class Day12.
  */
-public class Day12 {
+public class CDay12 {
 
     /*
      **************************************** PUBLIC FIELDS ************************************************************
