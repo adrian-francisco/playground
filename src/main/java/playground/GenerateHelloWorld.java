@@ -6,6 +6,7 @@
 package playground;
 
 import java.io.File;
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 import org.apache.commons.io.FileUtils;
@@ -44,18 +45,23 @@ public class GenerateHelloWorld {
      * @param args
      * @throws Exception on any exception
      */
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         StringBuffer java = new StringBuffer();
 
-        java.append("package playground;\n");
+        java.append("package playground.generated;\n");
         java.append("public class HelloWorld {\n");
         java.append("    public static void main(String[] args) {\n");
         java.append("        System.out.println(\"Hello, World\");\n");
         java.append("    }\n");
         java.append("}\n");
 
-        FileUtils.write(new File("target/generated-sources/dms/playground/HelloWorld.java"), java.toString(),
-                StandardCharsets.UTF_8);
+        try {
+            FileUtils.write(new File("target/generated-sources/playground/generated/HelloWorld.java"), java.toString(),
+                    StandardCharsets.UTF_8);
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /*
