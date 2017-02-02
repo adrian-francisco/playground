@@ -1,27 +1,26 @@
 /*
- * Name   : TaxonomyCopy.java
+ * Name : TaxonomyCopy.java
  * Author : Adrian Francisco
  * Created: 2013-03-26
  */
 package playground;
 
-import ca.gc.ec.dms.commons.controller.DataPayload;
-import ca.gc.ec.dms.commons.controller.ReadWriteException;
-import ca.gc.ec.dms.commons.parser.NotificationItem;
-import ca.gc.ec.dms.commons.parser.NotificationXML;
-import ca.gc.ec.dms.commons.util.HttpURLConnectionUtil;
-import ca.gc.ec.dms.commons.util.Notification;
+import java.io.InputStream;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import java.io.InputStream;
-
+import commons.DataPayload;
+import commons.HttpURLConnectionUtil;
+import commons.Notification;
+import commons.NotificationItem;
+import commons.NotificationXML;
+import commons.ReadWriteException;
 
 /**
  * Copies data given complete notification paths from one core to another.
  *
- * @author  Adrian Francisco
+ * @author Adrian Francisco
  */
 public class DataCopy {
 
@@ -31,9 +30,8 @@ public class DataCopy {
     /**
      * The main method.
      *
-     * @param   args  the arguments
-     *
-     * @throws  Exception  on any error
+     * @param args the arguments
+     * @throws Exception on any error
      */
     public static void main(String[] args) throws Exception {
         String fromDomain = "dms-stability.to.on.ec.gc.ca";
@@ -48,8 +46,7 @@ public class DataCopy {
                 "http://dms-stability.to.on.ec.gc.ca:8180/notification?path=/msc/observation/atmospheric/satellite/sarwinds-1.0-binary/decoded-header_ascii-1.0&time=2d&obstime=20130324022628",
                 "http://dms-stability.to.on.ec.gc.ca:8180/notification?path=/msc/observation/atmospheric/satellite/sarwinds-1.0-binary/decoded-sum_ascii-1.0&time=2d&obstime=20130324022628",
                 "http://dms-stability.to.on.ec.gc.ca:8180/notification?path=/msc/observation/atmospheric/satellite/sarwinds-1.0-binary/decoded-tiff-1.0&time=2d&obstime=20130324022628",
-                "http://dms-stability.to.on.ec.gc.ca:8180/notification?path=/msc/observation/atmospheric/satellite/sarwinds-1.0-binary/consolidated_wind-csv-1.0&time=6d&station=west_coast&obstime=20130325140000-20130325160000"
-            };
+                "http://dms-stability.to.on.ec.gc.ca:8180/notification?path=/msc/observation/atmospheric/satellite/sarwinds-1.0-binary/consolidated_wind-csv-1.0&time=6d&station=west_coast&obstime=20130325140000-20130325160000"};
 
         Notification.setDomain(fromDomain);
         Notification.setPort(fromPort);

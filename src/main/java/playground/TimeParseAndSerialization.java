@@ -1,23 +1,22 @@
 /*
- * Name   : TimeParseAndSerialization.java
+ * Name : TimeParseAndSerialization.java
  * Author : AdrianF
  * Created: 2013-11-13
  */
 package playground;
 
-import ca.gc.ec.dms.commons.parser.MultiPointObservation;
-import ca.gc.ec.dms.commons.util.XMLPrint;
-
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang.SerializationUtils;
-
 import java.io.File;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.SerializationUtils;
+
+import commons.MultiPointObservation;
+import commons.XMLPrint;
 
 /**
  * Compares XML Parse/Generation vs. Object Serialization.
  *
- * @author  AdrianF
+ * @author AdrianF
  */
 public class TimeParseAndSerialization {
 
@@ -31,7 +30,7 @@ public class TimeParseAndSerialization {
 
     /** filenames */
     private static String[] filenames = {"point-obs-small.xml", "point-obs-large.xml", "point-obs-multi.xml"};
-    //private static String[] filenames = {"point-obs-small.xml"};
+    // private static String[] filenames = {"point-obs-small.xml"};
 
     /*
      **************************************** CONSTRUCTORS *************************************************************
@@ -48,9 +47,8 @@ public class TimeParseAndSerialization {
      */
 
     /**
-     * @param   args
-     *
-     * @throws  Exception  on any exception
+     * @param args
+     * @throws Exception on any exception
      */
     public static void main(String[] args) throws Exception {
 
@@ -98,7 +96,7 @@ public class TimeParseAndSerialization {
 
             time = System.currentTimeMillis();
 
-            obs = (MultiPointObservation)SerializationUtils.deserialize(serialized);
+            obs = (MultiPointObservation) SerializationUtils.deserialize(serialized);
             time = System.currentTimeMillis() - time;
             System.out.println(filename + ": deserialize object (ms): " + time);
             total += time;
@@ -108,15 +106,15 @@ public class TimeParseAndSerialization {
 
             String newXML = new String(obs.generateXMLAsByte());
 
-//            if (xml.equals(newXML)) {
-//                System.out.println("SAME!");
-//            }
-//            else {
-//                System.err.println("expected:");
-//                System.err.println(XMLPrint.prettyPrint(xml));
-//                System.err.println("but was:");
-//                System.err.println(XMLPrint.prettyPrint(newXML));
-//            }
+            // if (xml.equals(newXML)) {
+            // System.out.println("SAME!");
+            // }
+            // else {
+            // System.err.println("expected:");
+            // System.err.println(XMLPrint.prettyPrint(xml));
+            // System.err.println("but was:");
+            // System.err.println(XMLPrint.prettyPrint(newXML));
+            // }
 
             System.out.println();
         }

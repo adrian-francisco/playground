@@ -205,17 +205,6 @@
             <artifactId>h2</artifactId>
             <version>1.4.193</version>
         </dependency>
-        <dependency>
-            <groupId>ca.gc.ec.dms</groupId>
-            <artifactId>dms-commons</artifactId>
-            <version>[1.0,)</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.quartz-scheduler</groupId>
-                    <artifactId>quartz</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
     </dependencies>
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>

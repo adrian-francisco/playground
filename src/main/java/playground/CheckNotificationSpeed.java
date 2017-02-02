@@ -1,33 +1,30 @@
 /*
- * Name   : CheckNotificationSpeed.java
+ * Name : CheckNotificationSpeed.java
  * Author : Adrian Francisco
  * Created: 2013-10-04
  */
 package playground;
 
-import ca.gc.ec.dms.commons.controller.ConfigurationResult;
-import ca.gc.ec.dms.commons.controller.DataPayload;
-import ca.gc.ec.dms.commons.controller.WebWrite;
-import ca.gc.ec.dms.commons.util.DateUtil;
-import ca.gc.ec.dms.commons.util.Notification;
-import ca.gc.ec.dms.commons.util.Properties;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
 import java.net.URI;
-
 import java.text.SimpleDateFormat;
-
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+import commons.ConfigurationResult;
+import commons.DataPayload;
+import commons.DateUtil;
+import commons.Notification;
+import commons.Properties;
+import commons.WebWrite;
 
 /**
  * Tests Speed for various notification methods.
  *
- * @author  Adrian Francisco
+ * @author Adrian Francisco
  */
 public class CheckNotificationSpeed {
 
@@ -57,9 +54,8 @@ public class CheckNotificationSpeed {
      */
 
     /**
-     * @param   args  no arguments
-     *
-     * @throws  Exception  on any exception
+     * @param args no arguments
+     * @throws Exception on any exception
      */
     public static void main(String[] args) throws Exception {
         Properties.getInstance();
@@ -70,7 +66,7 @@ public class CheckNotificationSpeed {
     /**
      * Tests notification speed between latest lookups vs received datetime lookups.
      *
-     * @throws  Exception  on any exception
+     * @throws Exception on any exception
      */
     public static void testInstanceLookupSpeedBetweenTwoCores() throws Exception {
 
@@ -127,12 +123,12 @@ public class CheckNotificationSpeed {
     /**
      * Tests notification speed between latest lookups vs received datetime lookups.
      *
-     * @throws  Exception  on any exception
+     * @throws Exception on any exception
      */
     public static void testLatestSpeed() throws Exception {
 
-        //Notification.setDomain("dms-dev15.to.on.ec.gc.ca");
-        //Notification.setPort("8180");
+        // Notification.setDomain("dms-dev15.to.on.ec.gc.ca");
+        // Notification.setPort("8180");
         Notification.setDomain("dms-dev12.to.on.ec.gc.ca");
         Notification.setPort("9180");
         Notification.setStartTime(8765);
@@ -152,9 +148,8 @@ public class CheckNotificationSpeed {
             int count = 0;
             time = System.currentTimeMillis();
 
-            for (URI uri :
-                Notification.getURIsByPrimaryStationReceivedTime(URI.create(path.toString() + "&orderBy=desc&count=1"),
-                    station)) {
+            for (URI uri : Notification.getURIsByPrimaryStationReceivedTime(
+                    URI.create(path.toString() + "&orderBy=desc&count=1"), station, null, null)) {
                 latest = uri;
                 count++;
             }
@@ -170,7 +165,7 @@ public class CheckNotificationSpeed {
     /**
      * Tests a write, then immediate notify. Seeing odd behaviour when doing this.
      *
-     * @throws  Exception  on any exception
+     * @throws Exception on any exception
      */
     public static void testWriteThenNotify() throws Exception {
         String domain = "dms-dev12.to.on.ec.gc.ca";
@@ -220,14 +215,13 @@ public class CheckNotificationSpeed {
             Calendar future = Calendar.getInstance();
             future.add(Calendar.HOUR, 1);
 
-            for (URI uri :
-                Notification.getURIsByPrimaryStationReceivedTime(URI.create(taxonomy), station, past.getTime(),
-                    future.getTime())) {
+            for (URI uri : Notification.getURIsByPrimaryStationReceivedTime(URI.create(taxonomy), station,
+                    past.getTime(), future.getTime())) {
                 latest = uri;
             }
 
             // using &latest, always pass, but very slow
-//            latest = Notification.getLatestURI(URI.create(taxonomy), station);
+            // latest = Notification.getLatestURI(URI.create(taxonomy), station);
 
             if (!latest.toString().endsWith(identity)) {
                 System.out.println("fail! (" + (System.currentTimeMillis() - time) + " ms)");
