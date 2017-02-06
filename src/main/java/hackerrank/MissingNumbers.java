@@ -26,21 +26,19 @@ public class MissingNumbers {
 		}
 
 		int m = in.nextInt();
-		List<Integer> b = new ArrayList<>();
+		Set<Integer> b = new TreeSet<>();
 
 		for (int i = 0; i < m; i++) {
-			b.add(in.nextInt());
+			int x = in.nextInt();
+
+			if (!a.remove((Object) x)) {
+				b.add(x);
+			}
 		}
 
 		in.close();
 
-		for (Integer i : a) {
-			b.remove(i);
-		}
-
-		Set<Integer> s = new TreeSet<>(b);
-
-		for (Integer i : s) {
+		for (Integer i : b) {
 			System.out.print(i + " ");
 		}
 	}
