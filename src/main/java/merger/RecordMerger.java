@@ -1,4 +1,5 @@
 package merger;
+
 import java.io.File;
 import java.nio.charset.StandardCharsets;
 
@@ -17,7 +18,7 @@ public class RecordMerger {
     /**
      * The output file.
      */
-    public static final String FILENAME_COMBINED = "out/combined.csv";
+    public static final String FILENAME_COMBINED = "target/merger/combined.csv";
 
     /**
      * Entry point of this test.
