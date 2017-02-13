@@ -8,15 +8,13 @@ package hackerrank;
 import static org.junit.Assert.assertEquals;
 
 import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 import java.util.Scanner;
-import java.util.logging.ConsoleHandler;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
 
 import org.junit.Test;
 
@@ -27,161 +25,89 @@ import org.junit.Test;
  */
 public class SuperKthLIS {
 
-    /** The logger. */
-    private static final Logger LOG = Logger.getLogger(SuperKthLIS.class.getName());
-
-    /** The result. */
-    private static String result;
-
-    static {
-        System.setProperty("java.util.logging.SimpleFormatter.format", "%5$s%6$s%n");
-    }
-
     /**
      * The main method.
      *
      * @param args the arguments
      */
     public static void main(String... args) {
-        Level level = Level.OFF;
-
-        if (args.length > 0) {
-            level = Level.FINE;
-        }
-
-        ConsoleHandler handler = new ConsoleHandler();
-
-        SimpleFormatter formatter = new SimpleFormatter();
-        handler.setFormatter(formatter);
-        handler.setLevel(level);
-
-        LOG.setLevel(level);
-        if (LOG.getHandlers().length == 0) {
-            LOG.addHandler(handler);
-        }
-
         Scanner scanner = new Scanner(System.in, "UTF-8");
 
-        int N = scanner.nextInt();
-        int K = scanner.nextInt();
+        int n = scanner.nextInt();
+        int k = scanner.nextInt();
 
-        List<Integer> NS = new ArrayList<>();
+        // the array to calculate lis
+        int[] array = new int[n];
 
-        for (int i = 0; i < N; i++) {
-            NS.add(scanner.nextInt());
+        // array of max lis at the given index
+        int[] lis = new int[n];
+
+        // array of max found sequences at the given index
+        // format: 1 2 3 4, 5 6 7 8
+        // TODO: change this to an array of array of ints, the string manipulation is expensive
+        String[] seqs = new String[n];
+
+        for (int i = 0; i < n; i++) {
+            array[i] = scanner.nextInt();
+            lis[i] = 1;
+            seqs[i] = Integer.toString(array[i]);
         }
 
         scanner.close();
 
-        LOG.fine("N: " + N);
-        LOG.fine("K: " + K);
-        LOG.fine("NS: " + NS);
+        // the currently known max lis
+        int max = Integer.MIN_VALUE;
 
-        List<List<Integer>> sequences = new ArrayList<>();
-        int maxSequence = 0;
+        // do it
+        for (int i = 1; i < n; i++) {
+            for (int j = 0; j < i; j++) {
+                if (array[i] > array[j]) {
 
-        for (int i = 0; i < N; i++) {
-            Integer currentN = NS.get(i);
-            List<List<Integer>> modifiedSequences = new ArrayList<>();
+                    if (lis[i] < lis[j] + 1) {
+                        lis[i] = lis[j] + 1;
 
-            for (List<Integer> sequence : sequences) {
-                // add to previous sequences if incrementing
-                if (currentN > last(sequence)) {
+                        StringBuilder sb = new StringBuilder();
+                        for (String seq : seqs[j].split(",")) {
+                            sb.append(seq).append(" ").append(array[i]).append(",");
+                        }
 
-                    // copy the current sequence first before adding to it
-                    // this is to allow additional numbers in the sequence later
-                    List<Integer> copy = new ArrayList<>(sequence);
-                    modifiedSequences.add(copy);
+                        sb.deleteCharAt(sb.length() - 1);
+                        seqs[i] = sb.toString();
 
-                    // add to the current sequence
-                    sequence.add(currentN);
-                    if (sequence.size() > maxSequence) {
-                        maxSequence = sequence.size();
+                        if (max < lis[i]) {
+                            max = lis[i];
+                        }
                     }
-
-                    // delete the previous sequence
-                    // TODO
+                    else if (lis[i] == lis[j] + 1) {
+                        StringBuilder sb = new StringBuilder();
+                        for (String seq : seqs[j].split(",")) {
+                            sb.append(seq).append(" ").append(array[i]).append(",");
+                        }
+                        sb.append(seqs[i]);
+                        seqs[i] = sb.toString();
+                    }
                 }
             }
-
-            if (modifiedSequences.size() > 0) {
-                // add all modified sequences
-                sequences.addAll(modifiedSequences);
-            }
-            else {
-                // add current number as a new sequence
-                List<Integer> sequence = new ArrayList<>();
-                sequence.add(currentN);
-                sequences.add(sequence);
-            }
         }
 
-        LOG.fine("generated sequences: " + sequences.size());
-        List<String> sortedMaxSequences = new ArrayList<>();
-        for (List<Integer> sequence : sequences) {
-            LOG.finer(sequence.toString());
-            if (sequence.size() == maxSequence) {
-                sortedMaxSequences.add(print(sequence));
-            }
-        }
-        Collections.sort(sortedMaxSequences);
-
-        LOG.fine("sorted and max sequences:");
-        for (String sortedMaxSequence : sortedMaxSequences) {
-            LOG.fine(sortedMaxSequence);
-        }
-
-        if (0 < K && K < sortedMaxSequences.size() + 1) {
-            result = sortedMaxSequences.get(K - 1);
-        }
-        else {
-            result = "-1";
-        }
-
-        LOG.fine("result:");
-        System.out.println(result);
-    }
-
-    /**
-     * Generate.
-     *
-     * @param n the n
-     * @return the list
-     */
-    private static List<Integer> generate(int n) {
-        List<Integer> result = new ArrayList<>();
-        Random random = new Random();
+        // extract the max sequences and sort
+        List<String> sortedMaxSeqs = new ArrayList<>();
 
         for (int i = 0; i < n; i++) {
-            result.add(random.nextInt(n));
+            if (lis[i] == max) {
+                sortedMaxSeqs.addAll(Arrays.asList(seqs[i].split(",")));
+            }
         }
 
-        return result;
-    }
+        Collections.sort(sortedMaxSeqs);
 
-    /**
-     * Prints.
-     *
-     * @param list the list
-     * @return the string
-     */
-    private static String print(List<Integer> list) {
-        StringBuffer sb = new StringBuffer();
-        for (Integer i : list) {
-            sb.append(i).append(" ");
+        // print the kth max lis
+        if (sortedMaxSeqs.size() < k) {
+            System.out.println("-1");
         }
-        sb.deleteCharAt(sb.length() - 1);
-        return sb.toString();
-    }
-
-    /**
-     * Last.
-     *
-     * @param list the list
-     * @return the int
-     */
-    private static int last(List<Integer> list) {
-        return list.get(list.size() - 1);
+        else {
+            System.out.println(sortedMaxSeqs.get(k - 1));
+        }
     }
 
     /*
@@ -200,10 +126,12 @@ public class SuperKthLIS {
         input.append("1 3 1 2 5\n");
 
         System.setIn(new ByteArrayInputStream(input.toString().getBytes("UTF-8")));
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(baos));
 
-        SuperKthLIS.main("log");
+        main();
 
-        assertEquals("1 3 5", SuperKthLIS.result);
+        assertEquals("1 3 5", baos.toString().trim());
     }
 
     /**
@@ -218,10 +146,12 @@ public class SuperKthLIS {
         input.append("1 3 2 4 5\n");
 
         System.setIn(new ByteArrayInputStream(input.toString().getBytes("UTF-8")));
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(baos));
 
-        SuperKthLIS.main("log");
+        main();
 
-        assertEquals("1 3 4 5", SuperKthLIS.result);
+        assertEquals("1 3 4 5", baos.toString().trim());
     }
 
     /**
@@ -236,9 +166,32 @@ public class SuperKthLIS {
         input.append("0 8 4 12 2 10 6 14 1 9 5 13 3 11 7 15\n");
 
         System.setIn(new ByteArrayInputStream(input.toString().getBytes("UTF-8")));
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(baos));
 
-        SuperKthLIS.main("log");
+        main();
 
-        assertEquals("0 2 6 9 11 15", SuperKthLIS.result);
+        assertEquals("0 2 6 9 11 15", baos.toString().trim());
+    }
+
+    /**
+     * Test 3.
+     *
+     * @throws Exception the exception
+     */
+    @Test
+    public void testInput3() throws Exception {
+        int n = 1000;
+        StringBuilder input = new StringBuilder();
+        input.append(n + " 1\n");
+
+        for (int i = 0; i < n; i++) {
+            input.append(Math.round(Math.random() * n));
+            input.append(" ");
+        }
+
+        System.setIn(new ByteArrayInputStream(input.toString().getBytes("UTF-8")));
+
+        main();
     }
 }
