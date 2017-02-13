@@ -191,6 +191,27 @@ public class Statistics {
         return quartiles[2] - quartiles[0];
     }
 
+    /**
+     * Calculate the standard deviation of the given array.
+     *
+     * @param array the array
+     * @return the standard deviation
+     */
+    public static double standardDeviation(double[] array) {
+        int n = array.length;
+        double mean = mean(array);
+        double stddev = 0;
+
+        for (int i = 0; i < n; i++) {
+            stddev += Math.pow(array[i] - mean, 2);
+        }
+
+        stddev /= n;
+        stddev = Math.sqrt(stddev);
+
+        return stddev;
+    }
+
     /*
      **************************************** PRIVATE METHODS **********************************************************
      */

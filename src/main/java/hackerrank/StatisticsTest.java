@@ -160,6 +160,14 @@ public class StatisticsTest {
                 new double[] {6, 6, 6, 6, 6, 8, 8, 8, 10, 10, 12, 12, 12, 12, 16, 16, 16, 16, 16, 20}), 0);
     }
 
+    /**
+     * Test standard deviation.
+     */
+    @Test
+    public void testStandardDeviation() {
+        assertEquals(14.1, Statistics.standardDeviation(new double[] {10, 40, 30, 50, 20}), 0.1);
+    }
+
     /*
      **************************************** PRIVATE METHODS **********************************************************
      */}
