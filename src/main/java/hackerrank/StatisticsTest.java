@@ -88,6 +88,15 @@ public class StatisticsTest {
      */
 
     /**
+     * Test round.
+     */
+    @Test
+    public final void testRound() {
+        assertEquals(1.2, Statistics.round(1.234, 1), 0);
+        assertEquals(1.33, Statistics.round(1.325, 2), 0);
+    }
+
+    /**
      * Test mean.
      */
     @Test
@@ -140,6 +149,15 @@ public class StatisticsTest {
         assertEquals(7, q[0], 0);
         assertEquals(13, q[1], 0);
         assertEquals(15, q[2], 0);
+    }
+
+    /**
+     * Test interquartile range.
+     */
+    @Test
+    public void testInterquartileRange() {
+        assertEquals(9, Statistics.interquartileRange(
+                new double[] {6, 6, 6, 6, 6, 8, 8, 8, 10, 10, 12, 12, 12, 12, 16, 16, 16, 16, 16, 20}), 0);
     }
 
     /*

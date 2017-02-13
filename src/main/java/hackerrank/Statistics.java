@@ -31,6 +31,18 @@ public class Statistics {
      */
 
     /**
+     * Rounds a double based on the given precision.
+     *
+     * @param d the d
+     * @param precision the precision
+     * @return the rounded double
+     */
+    public static double round(double d, int precision) {
+        double tens = Math.pow(10.0, precision);
+        return Math.round(d * tens) / tens;
+    }
+
+    /**
      * Calculate the mean of the array.
      *
      * @param array the array
@@ -166,6 +178,17 @@ public class Statistics {
         }
 
         return quartiles;
+    }
+
+    /**
+     * Calculate the interquartile range of the given array.
+     *
+     * @param array the array
+     * @return the interquartile range
+     */
+    public static double interquartileRange(double[] array) {
+        double[] quartiles = quartiles(array);
+        return quartiles[2] - quartiles[0];
     }
 
     /*
