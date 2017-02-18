@@ -92,6 +92,7 @@ public class StatisticsTest {
      */
     @Test
     public final void testRound() {
+        assertEquals(1, Statistics.round(1, 1), 0);
         assertEquals(1.2, Statistics.round(1.234, 1), 0);
         assertEquals(1.33, Statistics.round(1.325, 2), 0);
     }
@@ -110,6 +111,7 @@ public class StatisticsTest {
      */
     @Test
     public final void testMedian() {
+        assertEquals(1, Statistics.median(new double[] {1}), 0);
         assertEquals(2.5, Statistics.median(new double[] {1, 2, 3, 4}), 0);
         assertEquals(2, Statistics.median(new double[] {1, 2, 3}), 0);
     }
