@@ -21,7 +21,7 @@ console.log();
 for(let i of employee){
     console.log(i);
 }
- 
+  
 // use let
 var blah = "hello world!";
 console.log(blah);
@@ -91,14 +91,29 @@ console.log(`${bear} says ${says}`);
 // auto set names
 let zoo = {bear, says};
 console.log(zoo);
-
+ 
 // auto set values
 let grizzly = { t: "grizzly", many : 2, more: 5};
 let {t, many} = grizzly;
 console.log(`${t} and ${many}`);
 
-// varargs, nice
+// varargs are nice
 function bears (...types) {
 	console.log(types);
 }
 bears("polar", "grizzly", "koala");
+
+// 2d empty arrays, init using a for loop, must set all row first, columns can be variable
+let array = [];
+for (let i=0; i<10; i++) {
+	array[i] = [];
+}
+// these work because array[0] and array[1] were initialized
+array[0][1] = "0,1";
+array[1][5] = "1,5";
+array[10] = [];
+array[10][0] = "10,0";
+array[3][2] = "3,2";
+// this doesn't work because it is out of bounds
+//array[344][342] = "344,342";
+console.log(array);
