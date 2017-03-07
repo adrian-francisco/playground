@@ -22,7 +22,13 @@ public class Utilities {
         // specify UTF-8 encoding for scanners
         Scanner in = new Scanner(System.in, "UTF-8");
 
-        // close scanners
+        // sample while loop for cases without using i
+        int t = in.nextInt();
+        while (t-- > 0) {
+            // the rest of the code
+        }
+
+        // close scanner
         in.close();
     }
 
@@ -41,7 +47,7 @@ public class Utilities {
 
         String output = "6 6 -1\n" + "-1 6";
 
-        Assert.assertEquals(output, baos.toString("UTF-8").trim());
+        Assert.assertEquals(output.trim(), baos.toString("UTF-8").trim());
     }
 
     // file in/out unit test
@@ -58,6 +64,6 @@ public class Utilities {
 
         main();
 
-        Assert.assertEquals(output, baos.toString("UTF-8").trim());
+        Assert.assertEquals(output.trim(), baos.toString("UTF-8").trim());
     }
 }
