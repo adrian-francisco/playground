@@ -35,7 +35,7 @@ public class CheckAccuRev {
      * Example: DEVELOPERS = { "username1", "username2", "username3" };
      * </p>
      */
-    public static final String[] DEVELOPERS = {"JasonL"};
+    public static final String[] DEVELOPERS = {};
 
     /**
      * Main.
