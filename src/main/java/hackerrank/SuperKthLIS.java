@@ -16,6 +16,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -179,6 +180,7 @@ public class SuperKthLIS {
      *
      * @throws Exception the exception
      */
+    @Ignore
     @Test
     public void testInput3() throws Exception {
         int n = 1000;
