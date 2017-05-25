@@ -7,6 +7,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <argLine>-Xmx1g</argLine>
     </properties>
     <dependencies>
         <dependency>
@@ -100,9 +101,9 @@
             <version>2.9.4</version>
         </dependency>
         <dependency>
-            <groupId>com.googlecode.jmockit</groupId>
+            <groupId>org.jmockit</groupId>
             <artifactId>jmockit</artifactId>
-            <version>1.7</version>
+            <version>1.31</version>
         </dependency>
         <dependency>
             <groupId>org.ehcache</groupId>
@@ -265,7 +266,6 @@
                 <version>2.18.1</version>
                 <configuration>
                     <redirectTestOutputToFile>true</redirectTestOutputToFile>
-                    <argLine>-Xmx1g</argLine>
                     <forkedProcessTimeoutInSeconds>5</forkedProcessTimeoutInSeconds>
                 </configuration>
             </plugin>
@@ -303,6 +303,32 @@
                 <configuration>
                     <mainClass>playground.GenerateHelloWorld</mainClass>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.7.9</version>
+                <executions>
+                    <execution>
+                        <id>default-prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>default-report</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>default-check</id>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
