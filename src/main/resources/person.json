@@ -1,0 +1,15 @@
+{
+    "name": "John",
+    "age": 13,
+    "isMarried": false,
+    "address": {
+        "street": "Main Street",
+        "city": "New York",
+        "zipCode": "11111"
+    },
+    "phoneNumber": [
+        "00-000-0000",
+        "11-111-1111",
+        "11-111-1112"
+    ]
+}
