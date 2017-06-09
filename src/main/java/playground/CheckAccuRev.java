@@ -56,7 +56,7 @@ public class CheckAccuRev {
         // checkStranded();
         // checkSnapshot();
 
-        System.out.println("\nDone");
+        System.out.println("\ndone");
     }
 
     /**
@@ -138,22 +138,22 @@ public class CheckAccuRev {
             }
 
             String[] split = line.split("\\s+");
-            String depot = split[0];
+            String stream = split[0];
 
-            if (!depot.endsWith("_Development")) {
+            if (!stream.endsWith("_Development")) {
                 continue;
             }
 
             first = true;
 
-            for (Iterator<String> i = CommandExecutor.execute(ACCUREV + " wip -s " + depot).iterator(); i.hasNext();) {
+            for (Iterator<String> i = CommandExecutor.execute(ACCUREV + " wip -s " + stream).iterator(); i.hasNext();) {
                 String file = i.next().trim();
                 String user = i.next().trim();
 
                 if (ArrayUtils.isEmpty(DEVELOPERS)) {
 
                     if (first) {
-                        System.out.println("\n" + depot);
+                        System.out.println("\n" + stream);
                         first = false;
                         found = true;
                     }
@@ -167,7 +167,7 @@ public class CheckAccuRev {
                         if (user.toLowerCase().contains(developer.toLowerCase())) {
 
                             if (first) {
-                                System.out.println("\n" + depot);
+                                System.out.println("\n" + stream);
                                 first = false;
                                 found = true;
                             }
@@ -192,10 +192,37 @@ public class CheckAccuRev {
 
     /**
      * Check stranded.
+     *
+     * @throws Exception the exception
      */
-    private static void checkStranded() {
-        // TODO Auto-generated method stub
+    private static void checkStranded() throws Exception {
+        boolean found = false;
 
+        for (String line : CommandExecutor.execute(ACCUREV + " show -d -s MSC-DMS -ms streams")) {
+            String[] split = line.split("\\s+");
+            String stream = split[0];
+
+            if (!stream.endsWith("_Development")) {
+                continue;
+            }
+
+            boolean first = true;
+
+            for (String stranded : CommandExecutor.execute(ACCUREV + " stat -s " + stream + " -i")) {
+                found = true;
+
+                if (first) {
+                    System.out.println(stream);
+                    first = false;
+                }
+
+                System.out.println("\t" + stranded.split("\\s+")[0]);
+            }
+        }
+
+        if (!found) {
+            System.out.println("\nno stranded files found");
+        }
     }
 
     /**
@@ -208,7 +235,7 @@ public class CheckAccuRev {
         int maxDepotLength = 0;
         int maxNameLength = 0;
 
-        // depot -> date -> [name, date, time]
+        // depot (sorted) -> date (sorted) -> [name, date, time]
         Map<String, Map<String, String[]>> snapshots = new TreeMap<>();
 
         for (String line : CommandExecutor.execute(ACCUREV + " show -s MSC-DMS -ms streams")) {
@@ -225,6 +252,8 @@ public class CheckAccuRev {
 
             String name = split[0];
             String depot = split[2];
+
+            // manual fixes for some poorly names snapshots
 
             if ("MSC-DMS-Core".equals(depot) && !name.startsWith("MSC-DMS-Core")) {
                 name = name.replace("MSC-DMS", "MSC-DMS-Core");
