@@ -4,7 +4,7 @@
 # (i.e. the before date ends with a 00, old ui ends with a 59)
 # (ex: ~8~~~~~~~~1~~~~~~~~1000-01-01 00:00:00~~~~~~~~2018-05-13 03:00:00~)
 
-# Execute: ssh afrancisco@<ip> "bash -s" < find-saved-searches.sh > <ip>.txt &
+# Execute Remotely: ssh <you>@<ip> "bash -s" < find-saved-searches.sh > <ip>.txt &
 
 # Folder Item Types (UserFolderItem):
 # FOLDER_ITEM_TYPE_SIMPLE_SEARCH = 1;
@@ -21,35 +21,11 @@
 # Additional Search Notes:
 # There can be many "~" between the field and value in the serialized blob
 
-# Folder Stores:
-# CA1
-#   10.98.10.11 (done)
-# CA2
-#   10.130.64.11 (done)
-# EU1
-#   10.215.10.11 (done)
-# US2
-#   10.102.10.23 
-#   10.102.10.13 (done)
-#   10.102.11.29
-#   10.102.10.14
-#   10.102.11.12 (done)
-#   10.102.10.20
-#   10.102.10.24
-#   10.102.13.11 (done)
-#   10.102.11.21 (done)
-# FED1
-#   10.109.65.13	
-#   10.109.65.14
-
 echo "`date`: start..."
 
 mysql=/usr/local/fortiva/mysql/bin/mysql
 user="fortro"
-#pass="Rh1n0ceR0$"
-pass="@Rm@d1ll0"
-
-#regex='.*~((8|44|178)~*1~*1000-01-01|(8|44|178)~*1~*\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d~*9000-12-31).*'
+pass="<CHANGE-ME!>"
 regex='~(8|44|178)~*1~*1000-01-01\s00:00:00~*[0-9]{4}-[0-9]{2}-[0-9]{2}\s[0-9]{2}:[0-9]0:00~'
 
 if [ ! -f $mysql ]
@@ -68,27 +44,34 @@ do
 
 	echo "$db processing..."
 
+	offset=0
+	limit=10000000
+	max=`$mysql -u$user -p$pass -D $db -Bse "select max(folderitemid) from folderitems"`
         index=0
         count=0
-        while read -r output;
-        do
-                row=`echo $output | awk -F"\t" '{print $0}'`
-                short=`echo $row | cut -c1-80`
-                echo -n "$index: $short "
-                if echo $row | egrep --quiet --max-count=1 $regex
-                then
-                	echo "(HIT)"
-                        count=$[$count+1]
-                else
-                	echo "(MISS)"
-                fi
-		#echo $row | egrep --only-matching --max-count=1 $regex
-                index=$[$index+1]
-        done< <($mysql -u$user -p$pass -Bse "select folderitemid,name,itemtype,itemdata from ${db}.folderitems where itemtype in (1, 2, 5, 6, 7)")
+
+	while [ $offset -lt $max ]
+	do
+		while read -r output;
+		do
+	                row=`echo $output | awk -F"\t" '{print $0}'`
+                        short=`echo $row | cut -c1-80`
+                        echo -n "$index: $short "
+                        if echo $row | egrep --quiet --max-count=1 $regex
+                        then
+                        	echo "(HIT)"
+                                count=$[$count+1]
+                        else
+                        	echo "(MISS)"
+                        fi
+                        index=$[$index+1]
+                done< <($mysql -u$user -p$pass -D $db -Bse "select f.folderitemid,f.name,f.itemtype,f.itemdata from (select folderitemid from folderitems where folderitemid>$offset order by folderitemid limit $limit) q join folderitems f on f.folderitemid=q.folderitemid and f.itemtype in (1,2,5,6,7)")
+		offset=`$mysql -u$user -p$pass -D $db -Bse "select max(f.folderitemid) from (select folderitemid from folderitems where folderitemid>$offset order by folderitemid limit $limit) q join folderitems f on f.folderitemid=q.folderitemid"` 
+	done
 
         echo "ip=`hostname -i` store=$db count=$count"
 	total=$[$total+$count]
 done
 
-e#cho "`date`: done total=$total"
+echo "`date`: done total=$total"
 exit 0
