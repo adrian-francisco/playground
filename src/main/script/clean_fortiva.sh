@@ -5,14 +5,12 @@ MUSER="fortivaUnitTest"
 MPWD="fortivaUnitTest"
 MYSQL="mysql"
 
-DBS="$($MYSQL -u$MUSER -p$MPWD -Bse 'show databases')"
+DBS="$($MYSQL -u$MUSER -p$MPWD -Bse 'show databases' 2>/dev/null)"
 for db in $DBS
 do
-  echo "database --> $db"
-  
-  if [[ "$db" == "$DB_STARTS_WITH"* ]]
-  then
-      echo "Deleting $db"
-      $MYSQL -u$MUSER -p$MPWD -Bse "drop database $db"
-  fi
+    if [[ "$db" == "$DB_STARTS_WITH"* ]]
+    then
+        echo "Deleting $db"
+        $MYSQL -u$MUSER -p$MPWD -Bse "drop database $db" 2>/dev/null
+    fi
 done
