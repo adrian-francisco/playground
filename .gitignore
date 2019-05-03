@@ -5,3 +5,6 @@
 .project
 .DS_Store
 /.buildpath
+*.suo
+[Bb]in/
+[Oo]bj/
