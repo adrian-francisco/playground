@@ -1,0 +1,2534 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<Author>Peter McDonald</Author>
+	<PageHeader>
+		<Height>0.375in</Height>
+		<PrintOnFirstPage>true</PrintOnFirstPage>
+		<PrintOnLastPage>true</PrintOnLastPage>
+		<ReportItems>
+			<Textbox Name="TextBox1">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Value>REVIEWER ACTIVITY REPORT</Value>
+				<Style>
+					<FontFamily>Arial</FontFamily>
+					<FontSize>14pt</FontSize>
+					<FontStyle>Normal</FontStyle>
+					<FontWeight>700</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>0pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Left</TextAlign>
+					<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">True</dd:ShrinkToFit>
+				</Style>
+				<Top>0.104167in</Top>
+				<Visibility>
+					<Hidden>=IIF(Parameters!ExportType.Value="XLS" or Parameters!ExportType.Value="CSV",true,false)</Hidden>
+				</Visibility>
+				<Width>4.2604in</Width>
+			</Textbox>
+			<Line Name="Line1">
+				<Height>0in</Height>
+				<Style>
+					<BorderColor>
+						<Default>#18a2cb</Default>
+					</BorderColor>
+					<BorderStyle>
+						<Default>Solid</Default>
+					</BorderStyle>
+					<BorderWidth>
+						<Default>2pt</Default>
+					</BorderWidth>
+				</Style>
+				<Top>0.359195in</Top>
+				<Visibility>
+					<Hidden>=IIF(Parameters!ExportType.Value="XLS" or Parameters!ExportType.Value="CSV",true,false)</Hidden>
+				</Visibility>
+				<Width>10.2452in</Width>
+				<ZIndex>1</ZIndex>
+			</Line>
+		</ReportItems>
+		<Style>
+			<BorderColor>
+				<Default>DimGray</Default>
+			</BorderColor>
+		</Style>
+	</PageHeader>
+	<Body>
+		<ColumnSpacing>0in</ColumnSpacing>
+		<Height>9.722249in</Height>
+		<ReportItems>
+			<Rectangle Name="Container2">
+				<Height>0.999983in</Height>
+				<Style>
+					<BackgroundColor>AliceBlue</BackgroundColor>
+					<BorderColor>
+						<Default>LightSkyBlue</Default>
+					</BorderColor>
+					<BorderStyle>
+						<Default>Solid</Default>
+					</BorderStyle>
+				</Style>
+				<Visibility>
+					<Hidden>=IIF(Parameters!ExportType.Value="XLS" or Parameters!ExportType.Value="CSV",true,false)</Hidden>
+				</Visibility>
+				<Width>10.2452in</Width>
+				<ZIndex>22</ZIndex>
+				<ReportItems>
+					<Textbox Name="TextBox48">
+						<CanGrow>true</CanGrow>
+						<DataElementName>TextBox2</DataElementName>
+						<Height>0.1996in</Height>
+						<Left>0.045in</Left>
+						<Value>DATE RANGE:</Value>
+						<Style>
+							<FontFamily>Arial Narrow</FontFamily>
+							<FontSize>9pt</FontSize>
+							<FontStyle>Normal</FontStyle>
+							<FontWeight>700</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>0pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+							<TextAlign>Left</TextAlign>
+							<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+						</Style>
+						<Top>0.035in</Top>
+						<Width>0.9062in</Width>
+						<ZIndex>19</ZIndex>
+					</Textbox>
+					<Textbox Name="TextBox50">
+						<CanGrow>true</CanGrow>
+						<DataElementName>TextBox4</DataElementName>
+						<Height>0.1979in</Height>
+						<Left>0.855in</Left>
+						<Value>=First(Fields!CreatedBy.Value, "ResultSet_1") &amp; " on " &amp; ToDateTime(First(Fields!CreatedOn.Value, "ResultSet_1")).ToString("MMM d, yyyy h:mm tt UTC")</Value>
+						<Style>
+							<FontFamily>Arial Narrow</FontFamily>
+							<FontSize>9pt</FontSize>
+							<FontStyle>Normal</FontStyle>
+							<FontWeight>400</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+							<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+						</Style>
+						<Top>0.535in</Top>
+						<Width>4.5964in</Width>
+						<ZIndex>23</ZIndex>
+					</Textbox>
+					<Textbox Name="TextBox51">
+						<CanGrow>true</CanGrow>
+						<DataElementName>TextBox4</DataElementName>
+						<Height>0.6329in</Height>
+						<Left>5.79in</Left>
+						<Value>This tabular report shows how many items were reviewed by each reviewer in a specified time period. It also shows how many they “passed” and how many they identified as having an issue.</Value>
+						<Style>
+							<FontFamily>Arial Narrow</FontFamily>
+							<FontSize>9pt</FontSize>
+							<FontStyle>Normal</FontStyle>
+							<FontWeight>400</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+							<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+						</Style>
+						<Top>0.045in</Top>
+						<Width>4.2808in</Width>
+						<ZIndex>21</ZIndex>
+					</Textbox>
+					<Textbox Name="TextBox54">
+						<CanGrow>true</CanGrow>
+						<DataElementName>TextBox4</DataElementName>
+						<Height>0.1979in</Height>
+						<Left>0.855in</Left>
+						<Value>=First(Fields!ReviewTeam.Value, "ResultSet_1")</Value>
+						<Style>
+							<FontFamily>Arial Narrow</FontFamily>
+							<FontSize>9pt</FontSize>
+							<FontStyle>Normal</FontStyle>
+							<FontWeight>400</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+							<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+						</Style>
+						<Top>0.285in</Top>
+						<Width>3.6321in</Width>
+						<ZIndex>24</ZIndex>
+					</Textbox>
+					<Textbox Name="TextBox55">
+						<CanGrow>true</CanGrow>
+						<DataElementName>TextBox2</DataElementName>
+						<Height>0.1996in</Height>
+						<Left>4.935833in</Left>
+						<Value>DESCRIPTION:</Value>
+						<Style>
+							<FontFamily>Arial Narrow</FontFamily>
+							<FontSize>9pt</FontSize>
+							<FontStyle>Normal</FontStyle>
+							<FontWeight>700</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>0pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+							<TextAlign>Left</TextAlign>
+							<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+						</Style>
+						<Top>0.045in</Top>
+						<Width>0.9792in</Width>
+						<ZIndex>18</ZIndex>
+					</Textbox>
+					<Textbox Name="TextBox57">
+						<CanGrow>true</CanGrow>
+						<DataElementName>TextBox2</DataElementName>
+						<DataElementOutput>Output</DataElementOutput>
+						<Height>0.1979in</Height>
+						<Left>0.045in</Left>
+						<Value>CREATED BY:</Value>
+						<Style>
+							<FontFamily>Arial Narrow</FontFamily>
+							<FontSize>9pt</FontSize>
+							<FontStyle>Normal</FontStyle>
+							<FontWeight>700</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>0pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+							<TextAlign>Left</TextAlign>
+							<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+						</Style>
+						<Top>0.535in</Top>
+						<Width>0.9583in</Width>
+						<ZIndex>20</ZIndex>
+					</Textbox>
+					<Textbox Name="TextBox58">
+						<CanGrow>true</CanGrow>
+						<DataElementName>TextBox2</DataElementName>
+						<DataElementOutput>Output</DataElementOutput>
+						<Height>0.1979in</Height>
+						<Left>0.045in</Left>
+						<Value>REVIEW TEAM:</Value>
+						<Style>
+							<FontFamily>Arial Narrow</FontFamily>
+							<FontSize>9pt</FontSize>
+							<FontStyle>Normal</FontStyle>
+							<FontWeight>700</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>0pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+							<TextAlign>Left</TextAlign>
+							<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+						</Style>
+						<Top>0.285in</Top>
+						<Width>0.9792in</Width>
+						<ZIndex>20</ZIndex>
+					</Textbox>
+					<Textbox Name="TextBox59">
+						<CanGrow>true</CanGrow>
+						<DataElementName>TextBox4</DataElementName>
+						<Height>0.1996in</Height>
+						<Left>0.855in</Left>
+						<Value>=DateValue(First(Fields!From.Value, "ResultSet_1")).ToString("MMM d, yyyy") &amp; " to " &amp; DateValue(First(Fields!To.Value, "ResultSet_1")).ToString("MMM d, yyyy")</Value>
+						<Style>
+							<FontFamily>Arial Narrow</FontFamily>
+							<FontSize>9pt</FontSize>
+							<FontStyle>Normal</FontStyle>
+							<FontWeight>400</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+							<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+						</Style>
+						<Top>0.035in</Top>
+						<Width>3.637in</Width>
+						<ZIndex>22</ZIndex>
+					</Textbox>
+					<Textbox Name="TextBox39">
+						<CanGrow>true</CanGrow>
+						<DataElementName>TextBox2</DataElementName>
+						<DataElementOutput>Output</DataElementOutput>
+						<Height>0.1979in</Height>
+						<Left>0.042083in</Left>
+						<Value>EXECUTION TIME:</Value>
+						<Style>
+							<FontFamily>Arial Narrow</FontFamily>
+							<FontSize>9pt</FontSize>
+							<FontStyle>Normal</FontStyle>
+							<FontWeight>700</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>0pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+							<TextAlign>Left</TextAlign>
+							<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+						</Style>
+						<Top>0.792083in</Top>
+						<Width>1.205in</Width>
+						<ZIndex>25</ZIndex>
+					</Textbox>
+					<Textbox Name="TextBox11">
+						<CanGrow>true</CanGrow>
+						<DataElementName>TextBox4</DataElementName>
+						<Height>0.1979in</Height>
+						<Left>1.042083in</Left>
+						<Value>=ToDateTime(First(Fields!JobExecutedOn.Value, "ResultSet_1")).ToString("MMM d, yyyy h:mm tt UTC")</Value>
+						<Style>
+							<FontFamily>Arial Narrow</FontFamily>
+							<FontSize>9pt</FontSize>
+							<FontStyle>Normal</FontStyle>
+							<FontWeight>400</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+							<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+						</Style>
+						<Top>0.792083in</Top>
+						<Width>4.5964in</Width>
+						<ZIndex>24</ZIndex>
+					</Textbox>
+				</ReportItems>
+			</Rectangle>
+			<Chart Name="Chart2">
+				<CategoryAxis>
+					<Axis>
+						<Title />
+						<Visible>true</Visible>
+					</Axis>
+				</CategoryAxis>
+				<CategoryGroupings>
+					<CategoryGrouping>
+						<DynamicCategories>
+							<Grouping Name="Chart2_CategoryGroup1">
+								<Filters>
+									<Filter>
+										<FilterExpression>=Sum(ToInt32(Fields!Reviewed.Value))</FilterExpression>
+										<FilterValues>
+											<FilterValue>10</FilterValue>
+										</FilterValues>
+										<Operator>TopN</Operator>
+									</Filter>
+								</Filters>
+								<GroupExpressions>
+									<GroupExpression>=Fields!Reviewer.Value</GroupExpression>
+								</GroupExpressions>
+							</Grouping>
+							<Label>=Fields!Reviewer.Value</Label>
+							<Sorting>
+								<SortBy>
+									<Direction>Descending</Direction>
+									<SortExpression>=ToInt32(Fields!Reviewed.Value)</SortExpression>
+								</SortBy>
+							</Sorting>
+						</DynamicCategories>
+					</CategoryGrouping>
+				</CategoryGroupings>
+				<ChartData>
+					<ChartSeries>
+						<DataPoints>
+							<DataPoint>
+								<DataLabel>
+									<Style />
+								</DataLabel>
+								<DataValues>
+									<DataValue>
+										<Value>=Sum(ToInt32(Fields!ClearedIndividual.Value)+ToInt32(Fields!ClearedConversationBatch.Value)+ToInt32(Fields!ClearedSubjectBatch.Value)+ToInt32(Fields!ClearedOtherBatch.Value))</Value>
+									</DataValue>
+								</DataValues>
+								<Marker>
+									<Style />
+								</Marker>
+								<Style />
+							</DataPoint>
+						</DataPoints>
+						<dd:Subtype xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Stacked</dd:Subtype>
+						<dd:ValueAxisName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Y1</dd:ValueAxisName>
+					</ChartSeries>
+					<ChartSeries>
+						<DataPoints>
+							<DataPoint>
+								<DataLabel>
+									<Style />
+								</DataLabel>
+								<DataValues>
+									<DataValue>
+										<Value>=Sum(ToInt32(Fields!ConfirmClosed.Value)+ToInt32(Fields!ConfirmFollowup.Value))</Value>
+									</DataValue>
+								</DataValues>
+								<Marker>
+									<Style />
+								</Marker>
+								<Style />
+							</DataPoint>
+						</DataPoints>
+						<dd:Subtype xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Stacked</dd:Subtype>
+						<dd:ValueAxisName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Y1</dd:ValueAxisName>
+					</ChartSeries>
+					<ChartSeries>
+						<DataPoints>
+							<DataPoint>
+								<DataLabel>
+									<Style />
+								</DataLabel>
+								<DataValues>
+									<DataValue>
+										<Value>=Sum(ToInt32(Fields!Escalated.Value)+ToInt32(Fields!FollowupClosed.Value)+ToInt32(Fields!Ignored.Value))</Value>
+									</DataValue>
+								</DataValues>
+								<Marker>
+									<Style />
+								</Marker>
+								<Style />
+							</DataPoint>
+						</DataPoints>
+						<dd:Subtype xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Stacked</dd:Subtype>
+						<dd:ValueAxisName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Y1</dd:ValueAxisName>
+					</ChartSeries>
+				</ChartData>
+				<DataSetName>ResultSet_0</DataSetName>
+				<Height>3.1175in</Height>
+				<Legend>
+					<Position>RightCenter</Position>
+					<Style>
+						<FontSize>8pt</FontSize>
+					</Style>
+					<dd:UseSmartSettings xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">true</dd:UseSmartSettings>
+					<Visible>true</Visible>
+				</Legend>
+				<Palette>Custom</Palette>
+				<PlotArea>
+					<Style>
+						<BackgroundColor>Transparent</BackgroundColor>
+					</Style>
+				</PlotArea>
+				<SeriesGroupings>
+					<SeriesGrouping>
+						<StaticSeries>
+							<StaticMember>
+								<Label>Cleared </Label>
+							</StaticMember>
+							<StaticMember>
+								<Label>Confirmed</Label>
+							</StaticMember>
+							<StaticMember>
+								<Label>Other</Label>
+							</StaticMember>
+						</StaticSeries>
+					</SeriesGrouping>
+				</SeriesGroupings>
+				<Style>
+					<Color>AliceBlue</Color>
+					<BorderColor>
+						<Default>LightSkyBlue</Default>
+					</BorderColor>
+					<BorderStyle>
+						<Default>Solid</Default>
+					</BorderStyle>
+				</Style>
+				<Subtype>Stacked</Subtype>
+				<ThreeDProperties>
+					<Inclination>20</Inclination>
+					<ProjectionMode>Orthographic</ProjectionMode>
+					<Rotation>20</Rotation>
+					<Shading>Real</Shading>
+				</ThreeDProperties>
+				<Title>
+					<Style>
+						<FontFamily>Arial</FontFamily>
+						<FontSize>10pt</FontSize>
+						<FontStyle>Normal</FontStyle>
+						<FontWeight>400</FontWeight>
+						<TextAlign>Center</TextAlign>
+					</Style>
+				</Title>
+				<Top>1in</Top>
+				<Type>Column</Type>
+				<dd:ChartCustomPaletteColors xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+					<dd:ChartCustomPaletteColor>#18a2cb</dd:ChartCustomPaletteColor>
+					<dd:ChartCustomPaletteColor>#5dcdec</dd:ChartCustomPaletteColor>
+					<dd:ChartCustomPaletteColor>#076684</dd:ChartCustomPaletteColor>
+				</dd:ChartCustomPaletteColors>
+
+<ValueAxis>
+					<Axis>
+						<Title>
+							<Caption>Items</Caption>
+						</Title>
+						<Visible>true</Visible>
+					</Axis>
+				</ValueAxis>
+				<Visibility>
+					<Hidden>=IIF(Parameters!ExportType.Value="XLS" or Parameters!ExportType.Value="CSV",true,false)</Hidden>
+				</Visibility>
+				<Width>10.2452in</Width>
+				<ZIndex>6</ZIndex>
+				<dd:ChartAreas xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+					<ChartArea>
+						<ChartValueAxes>
+							<ChartAxis>
+								<Axis>
+									<Style>
+										<FontSize>8pt</FontSize>
+										<Format>d</Format>
+										<BorderColor>
+											<Default>DarkGray</Default>
+										</BorderColor>
+										<BorderStyle>
+											<Default>Solid</Default>
+										</BorderStyle>
+										<BorderWidth>
+											<Default>0.25pt</Default>
+										</BorderWidth>
+									</Style>
+									<Title>
+										<Caption>Reviewed Items</Caption>
+									</Title>
+									<Visible>true</Visible>
+									<dd:Name>Y1</dd:Name>
+								</Axis>
+							</ChartAxis>
+						</ChartValueAxes>
+					</ChartArea>
+				</dd:ChartAreas>
+			</Chart>
+			<Table Name="Table2">
+				<DataSetName>ResultSet_0</DataSetName>
+				<Header>
+					<RepeatOnNewPage>true</RepeatOnNewPage>
+					<TableRows>
+						<TableRow>
+							<Height>0.524467in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox27">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox5</DataElementName>
+											<Value>REVIEWER</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<Color>Black</Color>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>8pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>700</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>14pt</PaddingTop>
+												<TextAlign>General</TextAlign>
+												<VerticalAlign>Bottom</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>2pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox28">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox6</DataElementName>
+											<Value>REVIEWED </Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<Color>Black</Color>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>8pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>700</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>14pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Bottom</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>2pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox29">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox23</DataElementName>
+											<Value>IDENTIFIED </Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<Color>Black</Color>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>8pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>700</FontWeight>
+												<Format>=""</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>14pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Bottom</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>2pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox36">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox7</DataElementName>
+											<Value>CLEARED (ALL)</Value>
+											<Style>
+												<BackgroundColor>Transparent</BackgroundColor>
+												<Color>Black</Color>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>8pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>700</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>14pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Bottom</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>2pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox40">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox7</DataElementName>
+											<Value>CONFIRMED (ALL)</Value>
+											<Style>
+												<BackgroundColor>Transparent</BackgroundColor>
+												<Color>Black</Color>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>8pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>700</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>14pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Bottom</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>2pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox45">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox20</DataElementName>
+											<Value>OTHER</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<Color>Black</Color>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>8pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>700</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>14pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Bottom</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>2pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox20">
+											<CanGrow>true</CanGrow>
+											<Value>CLEARED (INDIVIDUAL)</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<Color>Black</Color>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>8pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>700</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>14pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Bottom</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>2pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox52">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox14</DataElementName>
+											<Value>CLEARED (OTHER BATCH)</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<Color>Black</Color>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>8pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>700</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>14pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Bottom</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>2pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox17">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox20</DataElementName>
+											<Value>CLEARED (SUBJECT BATCH)</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<Color>Black</Color>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>8pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>700</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>14pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Bottom</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>2pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox14">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox20</DataElementName>
+											<Value>CLEARED (CONVERSATION BATCH)</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<Color>Black</Color>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>8pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>700</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>14pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Bottom</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>2pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox44">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox20</DataElementName>
+											<Value>FOLLOW UP CLOSED</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<Color>Black</Color>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>8pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>700</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>14pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Bottom</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>2pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox3">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox20</DataElementName>
+											<Value>CONFIRMED AND CLOSED</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<Color>Black</Color>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>8pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>700</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>14pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Bottom</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>2pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox23">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox20</DataElementName>
+											<Value>CONFIRMED &amp; FOLLOW UP</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<Color>Black</Color>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>8pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>700</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>14pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Bottom</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>2pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox26">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox20</DataElementName>
+											<Value>COMMENTED</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<Color>Black</Color>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>8pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>700</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>14pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Bottom</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>2pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox35">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox20</DataElementName>
+											<Value>IGNORED</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<Color>Black</Color>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>8pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>700</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>14pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Bottom</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>2pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Header>
+				<Details>
+					<TableRows>
+						<TableRow>
+							<Height>0.277255in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox30">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox8</DataElementName>
+											<Value>=Fields!Reviewer.Value</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>General</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox31">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox8</DataElementName>
+											<Value>=ToInt32(Fields!Reviewed.Value)</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox32">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox24</DataElementName>
+											<Value>=ToInt32(Fields!Identified.Value)</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox37">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox10</DataElementName>
+											<Value>=ToInt32(Fields!ClearedIndividual.Value) + ToInt32(Fields!ClearedConversationBatch.Value) + ToInt32(Fields!ClearedSubjectBatch.Value) + ToInt32(Fields!ClearedOtherBatch.Value)</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox43">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox18</DataElementName>
+											<Value>=ToInt32(Fields!ConfirmClosed.Value) + (ToInt32(Fields!ConfirmFollowup.Value)</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox46">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox21</DataElementName>
+											<Value>=ToInt32(Fields!Escalated.Value) + ToInt32(Fields!FollowupClosed.Value) + ToInt32(Fields!Ignored.Value) + ToInt32(Fields!Deferred.Value)</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox21">
+											<CanGrow>true</CanGrow>
+											<Value>=ToInt32(Fields!ClearedIndividual.Value)</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox53">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox15</DataElementName>
+											<Value>=ToInt32(Fields!ClearedOtherBatch.Value)</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox18">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox24</DataElementName>
+											<Value>=ToInt32(Fields!ClearedSubjectBatch.Value)</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox15">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox21</DataElementName>
+											<Value>=ToInt32(Fields!ClearedConversationBatch.Value)</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox47">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox21</DataElementName>
+											<Value>=ToInt32(Fields!FollowUpClosed.Value)</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox4">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox21</DataElementName>
+											<Value>=ToInt32(Fields!ConfirmClosed.Value)</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox24">
+											<CanGrow>true</CanGrow>
+											<Value>=ToInt32(Fields!ConfirmFollowup.Value)</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox33">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox21</DataElementName>
+											<Value>=ToInt32(Fields!Commented.Value)</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox38">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox24</DataElementName>
+											<Value>=ToInt32(Fields!Ignored.Value)</Value>
+											<Style>
+												<BackgroundColor>=""</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+							<Visibility>
+								<Hidden>=IIF(RowNumber() Mod 2 = 1, False, True)</Hidden>
+							</Visibility>
+						</TableRow>
+						<TableRow>
+							<Height>0.265986in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox7">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox8</DataElementName>
+											<Value>=Fields!Reviewer.Value</Value>
+											<Style>
+												<BackgroundColor>WhiteSmoke</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>General</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox8">
+											<CanGrow>true</CanGrow>
+											<Value>=ToInt32(Fields!Reviewed.Value)</Value>
+											<Style>
+												<BackgroundColor>WhiteSmoke</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox9">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox24</DataElementName>
+											<Value>=ToInt32(Fields!Identified.Value)</Value>
+											<Style>
+												<BackgroundColor>WhiteSmoke</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox10">
+											<CanGrow>true</CanGrow>
+											<Value>=ToInt32(Fields!ClearedIndividual.Value) + ToInt32(Fields!ClearedConversationBatch.Value) + ToInt32(Fields!ClearedSubjectBatch.Value) + ToInt32(Fields!ClearedOtherBatch.Value)</Value>
+											<Style>
+												<BackgroundColor>WhiteSmoke</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox12">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox18</DataElementName>
+											<Value>=ToInt32(Fields!ConfirmClosed.Value) + (ToInt32(Fields!ConfirmFollowup.Value)</Value>
+											<Style>
+												<BackgroundColor>WhiteSmoke</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox13">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox21</DataElementName>
+											<Value>=ToInt32(Fields!Escalated.Value) + ToInt32(Fields!FollowupClosed.Value) + ToInt32(Fields!Ignored.Value) + ToInt32(Fields!Deferred.Value)</Value>
+											<Style>
+												<BackgroundColor>WhiteSmoke</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox22">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox21</DataElementName>
+											<Value>=ToInt32(Fields!ClearedIndividual.Value)</Value>
+											<Style>
+												<BackgroundColor>WhiteSmoke</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox56">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox15</DataElementName>
+											<Value>=ToInt32(Fields!ClearedOtherBatch.Value)</Value>
+											<Style>
+												<BackgroundColor>WhiteSmoke</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox19">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox24</DataElementName>
+											<Value>=ToInt32(Fields!ClearedSubjectBatch.Value)</Value>
+											<Style>
+												<BackgroundColor>WhiteSmoke</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox16">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox21</DataElementName>
+											<Value>=ToInt32(Fields!ClearedConversationBatch.Value)</Value>
+											<Style>
+												<BackgroundColor>WhiteSmoke</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox49">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox21</DataElementName>
+											<Value>=ToInt32(Fields!FollowUpClosed.Value)</Value>
+											<Style>
+												<BackgroundColor>WhiteSmoke</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox5">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox21</DataElementName>
+											<Value>=ToInt32(Fields!ConfirmClosed.Value)</Value>
+											<Style>
+												<BackgroundColor>WhiteSmoke</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox25">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox24</DataElementName>
+											<Value>=ToInt32(Fields!ConfirmFollowup.Value)</Value>
+											<Style>
+												<BackgroundColor>WhiteSmoke</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox34">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox21</DataElementName>
+											<Value>=ToInt32(Fields!Commented.Value)</Value>
+											<Style>
+												<BackgroundColor>WhiteSmoke</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox41">
+											<CanGrow>true</CanGrow>
+											<DataElementName>TextBox24</DataElementName>
+											<Value>=ToInt32(Fields!Ignored.Value)</Value>
+											<Style>
+												<BackgroundColor>WhiteSmoke</BackgroundColor>
+												<FontFamily>Arial Narrow</FontFamily>
+												<FontSize>9pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>n0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>4pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<VerticalAlign>Middle</VerticalAlign>
+												<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">=IIF(Parameters!ExportType.Value="XLS","NoWrap","WordWrap")</dd:WrapMode>
+												<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+												<BorderColor>
+													<Default>#cccccc</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>None</Default>
+													<Bottom>Solid</Bottom>
+													<Left>=""</Left>
+													<Right>=""</Right>
+													<Top>Solid</Top>
+												</BorderStyle>
+												<BorderWidth>
+													<Default>0.25pt</Default>
+												</BorderWidth>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+							<Visibility>
+								<Hidden>=IIF(RowNumber() Mod 2 = 1, True, False)</Hidden>
+							</Visibility>
+						</TableRow>
+					</TableRows>
+				</Details>
+				<Height>1.0625in</Height>
+				<NoRows>There are no results to display.</NoRows>
+				<Style>
+					<BorderColor>
+						<Default>#cccccc</Default>
+					</BorderColor>
+					<BorderStyle>
+						<Default>None</Default>
+					</BorderStyle>
+					<BorderWidth>
+						<Default>0.25pt</Default>
+					</BorderWidth>
+				</Style>
+				<TableColumns>
+					<TableColumn>
+						<Width>1.707123in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.707534in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.707534in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.707534in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.707534in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.707534in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.707534in</Width>
+						<Visibility>
+							<Hidden>=IIF(Parameters!ExportType.Value="PDF" or Parameters!ExportType.Value="HTML",true,false)</Hidden>
+						</Visibility>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.707534in</Width>
+						<Visibility>
+							<Hidden>=IIF(Parameters!ExportType.Value="PDF" or Parameters!ExportType.Value="HTML",true,false)</Hidden>
+						</Visibility>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.707534in</Width>
+						<Visibility>
+							<Hidden>=IIF(Parameters!ExportType.Value="PDF" or Parameters!ExportType.Value="HTML",true,false)</Hidden>
+						</Visibility>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.707534in</Width>
+						<Visibility>
+							<Hidden>=IIF(Parameters!ExportType.Value="PDF" or Parameters!ExportType.Value="HTML",true,false)</Hidden>
+						</Visibility>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.707534in</Width>
+						<Visibility>
+							<Hidden>=IIF(Parameters!ExportType.Value="PDF" or Parameters!ExportType.Value="HTML",true,false)</Hidden>
+						</Visibility>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.707534in</Width>
+						<Visibility>
+							<Hidden>=IIF(Parameters!ExportType.Value="PDF" or Parameters!ExportType.Value="HTML",true,false)</Hidden>
+						</Visibility>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.707534in</Width>
+						<Visibility>
+							<Hidden>=IIF(Parameters!ExportType.Value="PDF" or Parameters!ExportType.Value="HTML",true,false)</Hidden>
+						</Visibility>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.707534in</Width>
+						<Visibility>
+							<Hidden>=IIF(Parameters!ExportType.Value="PDF" or Parameters!ExportType.Value="HTML",true,false)</Hidden>
+						</Visibility>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.694935in</Width>
+						<Visibility>
+							<Hidden>=IIF(Parameters!ExportType.Value="PDF" or Parameters!ExportType.Value="HTML",true,false)</Hidden>
+						</Visibility>
+					</TableColumn>
+				</TableColumns>
+				<Top>4.125in</Top>
+				<Width>25.6in</Width>
+				<ZIndex>5</ZIndex>
+			</Table>
+		</ReportItems>
+		<Style>
+			<BorderWidth>
+				<Default>2pt</Default>
+			</BorderWidth>
+		</Style>
+	</Body>
+	<PageFooter>
+		<Height>0.385417in</Height>
+		<PrintOnFirstPage>true</PrintOnFirstPage>
+		<PrintOnLastPage>true</PrintOnLastPage>
+		<ReportItems>
+			<Rectangle Name="Container1">
+				<Height>0.2662in</Height>
+				<Left>4.456019in</Left>
+				<Style />
+				<Top>0.1041667in</Top>
+				<Visibility>
+					<Hidden>=IIF(Parameters!ExportType.Value="XLS" or Parameters!ExportType.Value="CSV",true,false)</Hidden>
+				</Visibility>
+				<Width>2.0104in</Width>
+				<ZIndex>23</ZIndex>
+				<ReportItems>
+					<Image Name="Image1">
+						<Height>0.1258in</Height>
+						<Left>0.836781in</Left>
+						<Sizing>FitProportional</Sizing>
+						<Source>Embedded</Source>
+						<Style />
+						<Top>0.0925926in</Top>
+						<Value>reportLogo7</Value>
+						<Width>0.8825in</Width>
+						<ZIndex>9</ZIndex>
+					</Image>
+					<Textbox Name="TextBox6">
+						<CanGrow>true</CanGrow>
+						<DataElementName>TextBox1</DataElementName>
+						<Height>0.1687in</Height>
+						<Left>0.2314815in</Left>
+						<Value>Created by:</Value>
+						<Style>
+							<FontFamily>Arial</FontFamily>
+							<FontSize>7pt</FontSize>
+							<FontStyle>Normal</FontStyle>
+							<FontWeight>400</FontWeight>
+							<PaddingBottom>1pt</PaddingBottom>
+							<PaddingLeft>1pt</PaddingLeft>
+							<PaddingRight>1pt</PaddingRight>
+							<PaddingTop>1pt</PaddingTop>
+							<TextAlign>Left</TextAlign>
+							<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">True</dd:ShrinkToFit>
+						</Style>
+						<Top>0.0925926in</Top>
+						<Width>0.6053in</Width>
+						<ZIndex>10</ZIndex>
+					</Textbox>
+				</ReportItems>
+			</Rectangle>
+			<Textbox Name="TextBox2">
+				<CanGrow>true</CanGrow>
+				<DataElementName>TextBox26</DataElementName>
+				<Height>0.25in</Height>
+				<Left>8.541667in</Left>
+				<Value>=" Page "&amp; Globals!PageNumber &amp; " of " &amp; Globals!TotalPages</Value>
+				<Style>
+					<FontFamily>Arial</FontFamily>
+					<FontSize>9pt</FontSize>
+					<FontStyle>Normal</FontStyle>
+					<FontWeight>400</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Right</TextAlign>
+				</Style>
+				<Top>0.1354167in</Top>
+				<Visibility>
+					<Hidden>=IIF(Parameters!ExportType.Value="XLS" or Parameters!ExportType.Value="CSV",true,false)</Hidden>
+				</Visibility>
+				<Width>1.707534in</Width>
+				<ZIndex>24</ZIndex>
+			</Textbox>
+		</ReportItems>
+		<Style />
+	</PageFooter>
+	<BottomMargin>0.35in</BottomMargin>
+	<LeftMargin>0.35in</LeftMargin>
+	<PageHeight>8.5in</PageHeight>
+	<PageWidth>11in</PageWidth>
+	<RightMargin>0.35in</RightMargin>
+	<TopMargin>0.35in</TopMargin>
+	<Width>25.74in</Width>
+	<ReportParameters>
+		<ReportParameter Name="ExportType">
+			<DataType>String</DataType>
+			<Prompt>Select export type</Prompt>
+			<ValidValues>
+				<ParameterValues>
+					<ParameterValue>
+						<Label>ExportCSV</Label>
+						<Value>CSV</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>ExportPDF</Label>
+						<Value>PDF</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>ExportXLS</Label>
+						<Value>XLS</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>ExportHTML</Label>
+						<Value>HTML</Value>
+					</ParameterValue>
+				</ParameterValues>
+			</ValidValues>
+		</ReportParameter>
+	</ReportParameters>
+	<EmbeddedImages>
+		<EmbeddedImage Name="LogowithblueChevron2">
+			<ImageData>iVBORw0KGgoAAAANSUhEUgAAAHMAAAASCAYAAABo6+EZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjRDRjZGRUZERTNBNjExRTVCQTE1RjY3OERFM0Y4MDAzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRDRjZGRUZFRTNBNjExRTVCQTE1RjY3OERFM0Y4MDAzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NENGNkZFRkJFM0E2MTFFNUJBMTVGNjc4REUzRjgwMDMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NENGNkZFRkNFM0E2MTFFNUJBMTVGNjc4REUzRjgwMDMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7tbP1JAAAFgElEQVR42uxZa2xURRReaFEaocXWEHwA+qNAFaVAQkmUKBVjBJWCGhQ1EKDxEU1AAxHUPxpB/SMUDViVBKqFCGipIo8GSX1B5WGx0igqqYvSCAErgloCrN9Hvqknk7vrPtrEbXqSb2fuzJmZM+fMOXPu3W6RSCTURZ2DuqWTsIOyM25AsRgYIdkfPHDi7NtpIncm0AJ56/+LP1kHy0wjQ+ai+AjonYbyfwjkALXATW2tb9T1we9OoAmYGSot+iWVRbqnkWPeaAy5AhgIrEvzyHgh0B+4Ffgaxp2cymSZOPElqv8IHAGmApcDYSoLYeGw8Q6errF6bAB+Bu4FCoAXwdsivmwUJWpnOPwWqHL9AV43RsbKA5qBrTYcoX+CWZd0SqF2uyfTXiADuBvI1brvY64TAWv2loxXS8bvJONvhqcHigl6bEZfnZGnh3TUCEwBrgV+BzaCb6/4ilEMAC7QHP3QNl314wdKi6phQO5jNTAcWI/nV1E+ntSdicldgN6mCXM9pU2FcNUSrhDFV+p7HrgTGKbnq8DXBJ7bUK+QYSxxo7PAs84oizzvAsUBslWK/y/wtShM+TRcpZOJSpkE9DQ8PIzjMc8+s24sGUvBu1Z8DIPOuBvQXqJ2J0+1jFXozfMIeJeDrwr1iVF0vw88hQq3oxWCafTWyKxRPVMNszfrVDOEVantImANhBoQMHaOMaRT0lB6gpTUCrwDrAL+1OZXg2e0GbLGGHIHsAzYr2dGiCWqs73GjKtR31FPpvuYZABvAp+r7TLgA6ybJRmvQfGeJ+PKGDLGIh7mfBr6fJj8lxZiDuqyTn2OjumZ2C5DzsXvJzLk+YPXHnfmOeB6nJaZAE/3U2qnEmYEjO1FUXQycxRy5+keIE3EPA8A01AfZxKWBSbDc+0btPajCp971D4DfFegfb48tc1r0TYb8BMGetEwtNO7OL/LdPtL8aS5xnPvkozTzaGiEZ5NQIfF8tgR5iBeTL2gfZHzZtE3fBbmwJCD0fayQjYd6DokQR+3hzE/xQL7zfNrzJJN8uHTD8DDGHOIdxJwxhinCc9bHCPq9DoX5saZSNC2Fngi4j2NotwotjiB/fCOP2KeX/ESKNItKsPg3WhkpBe5e3psnOsdxrgvNf4sdWj6cuIY/z3wAjANRpwEHEspATL1JtsB4U7CK37lpa1Q5dMO8Jzz2vqpPBTAH1ZYzlKC1Nf0+R7WbOp9E9jPQe/5J1O/1JMxHEXGQskYjzH8MN+akPZLi6i/Z9orNbaemefdfxnmdJ0KGHs8oM1ljZcE9PUx4Zzz/RFtbVC2qZ9MYD95AVeBr+hYMrr9RqLs+X9N1phjlL2FTKjJUr0+zvl2qSzAXIPMwaA3jHKvDwpJu8y4Em+eOwLmjIfGYy27p9tNvd6bbwh4BxsZGQGKjIxnOui9ssMo0zuVm7CpMtVtErAizvnKzJ3IDPIllFTKE2YjZa5fof1KYDZ46Tm7NX6KeL6AUvcksB++M67FXBWa9zm1nzYJ1FJzbzoZ2f+kSYyWJKnPaAfgb809Eust12Ep70hjHlRGVunxLMXCn8UzGfionEWoMvukZ77lsSwDT4VLdMB7D6qbFR7nB9x/9ye4H374mCxYmof1wkbGhcqq8/UaEyhjEhTtStimjw/MWh9S9l4OOfIlAyNVL6y7vr2M2SAl8JVkiL4GrcQCld6F705tbRSDLoCQW/U6U+Ca+ZKOvs0e727w0pseU7aZo3WZCb/OJMywN5q1G2N8A92i+QbqQNA4m7x1n8a6NUZG9wXIl7HVrNlgDa4ryE/cdhr+o977L7/qDFWGXmsSP77Lj9TXq5Q/YEeEqnT8uMmvUmYPi0OdgPivSTLoHuqiTkNdxuxE9I8AAwCPZDqMNZUetQAAAABJRU5ErkJggg==</ImageData>
+			<MIMEType>image/png</MIMEType>
+		</EmbeddedImage>
+		<EmbeddedImage Name="reportLogo1">
+			<ImageData>iVBORw0KGgoAAAANSUhEUgAAAGQAAAASCAIAAAAi++zfAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY4RTM0QTY1RTU1RTExRTVBRTU4QTVDNzA2NkQ3OEU0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY4RTM0QTY2RTU1RTExRTVBRTU4QTVDNzA2NkQ3OEU0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjhFMzRBNjNFNTVFMTFFNUFFNThBNUM3MDY2RDc4RTQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjhFMzRBNjRFNTVFMTFFNUFFNThBNUM3MDY2RDc4RTQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5Z/ZeiAAAG6ElEQVR42syYWUiW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</ImageData>
+			<MIMEType>image/png</MIMEType>
+		</EmbeddedImage>
+		<EmbeddedImage Name="reportLogo2">
+			<ImageData>iVBORw0KGgoAAAANSUhEUgAAAE4AAAAOCAIAAAAOkL0mAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY4RTM0QTY5RTU1RTExRTVBRTU4QTVDNzA2NkQ3OEU0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY4RTM0QTZBRTU1RTExRTVBRTU4QTVDNzA2NkQ3OEU0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjhFMzRBNjdFNTVFMTFFNUFFNThBNUM3MDY2RDc4RTQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjhFMzRBNjhFNTVFMTFFNUFFNThBNUM3MDY2RDc4RTQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4XUXW6AAAF2klEQVR42sxWCVBT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</ImageData>
+			<MIMEType>image/png</MIMEType>
+		</EmbeddedImage>
+		<EmbeddedImage Name="reportLogo3">
+			<ImageData>/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/4QMsaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjUtYzAyMSA3OS4xNTQ5MTEsIDIwMTMvMTAvMjktMTE6NDc6MTYgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowMjY0RDFFMEU1NjAxMUU1QUU1OEE1QzcwNjZENzhFNCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDowMjY0RDFFMUU1NjAxMUU1QUU1OEE1QzcwNjZENzhFNCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkY4RTM0QTZCRTU1RTExRTVBRTU4QTVDNzA2NkQ3OEU0IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkY4RTM0QTZDRTU1RTExRTVBRTU4QTVDNzA2NkQ3OEU0Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+/+4ADkFkb2JlAGTAAAAAAf/bAIQAAQEBAQEBAQEBAQEBAQEBAQEB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</ImageData>
+			<MIMEType>image/png</MIMEType>
+		</EmbeddedImage>
+		<EmbeddedImage Name="reportLogo4">
+			<ImageData>iVBORw0KGgoAAAANSUhEUgAAAEwAAAAOCAYAAACFB/pMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAqFJREFUeNrsV71u1EAQdtCVSLmKNkbQ4/RI53sDp6AmV1DHkeixWypfQUWB8wSYJ4gj0XP0kTA1jdPRHTPo2+hjbtf3owukYKTR2p6/ndnZmfHBcrmM/jU8jR8nsnyhT9Pr7lu7J92qZyJ4JTrTLWQUapGpmTaK7gdk9PxJsNuj7oVZN4EJ1pVDG0k0Y1lPSak+jwV7wUpP2vA0goU6JbRcaCloMegq1/DJgCeHXsejp9cITWVT66B8L+g9I/2tyBUmO3Oi28xYwF434KtCRd8cpLo/9uXgyVGsm70ciPYUq+O5ETzUFIeRjwG5OQKaDfEIJnSibHNoT3M6rBDfhfCc8pXEQQ/pfSX43nz74yo/MMSvgieCMwTGRZ7hENemJtoN5KbQoXCGE62HeATfqnMmWPb6nEOWdY+N7pnR/RLZFwLna8nlixIkwr5yFrIBK/SaIAXdZp4ZnpnQMzh1ZORak9KvEWCFnHgK4nnENUvpgr3JFC0NjZF7TvZ/X0HozgK1MQr4yjp/mmajZWcxFLA+8MzgnBt7CmtkDDz0yEVw3kG8pgBzA2hNNvjsb9ow+l06iA0Yb368hcHEFGEHP3y6Udd8AfEB74mbw3XAfhzdIdixohKDPYJ1Rm1+BTSThPc7rkUBuc7UvHeCL8DjdEfmatlrbEFrUYcsYrnPqENaMrS4Lzz2GxPkbUG7ZMK3ZuQp6LajVQMKc/Cr3AdPJ9NWzjxW9zl41m38jXkvtc5hJGkD9i9wqLsEyk0CExx05wI/8nSjNDCHlb5aJLRjMwfdzlhreCoqsENT/Rz7ie2MhYAkyLzQHFhDfwcsPaWgNPvIaLZsgepPYuewvf2S7OGXZknZVNyTP5KVov8fNij6PabgnVvtHcHVhl30r8IvAQYAxBtQXiDwn80AAAAASUVORK5CYII=</ImageData>
+			<MIMEType>image/png</MIMEType>
+		</EmbeddedImage>
+		<EmbeddedImage Name="reportLogo5">
+			<ImageData>iVBORw0KGgoAAAANSUhEUgAAAGQAAAASCAYAAACtmXuIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OTBEODJGODhFRjc0MTFFNUE0ODNEMzU0RjAzMDc4QzAiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OTBEODJGODdFRjc0MTFFNUE0ODNEMzU0RjAzMDc4QzAiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjhFMzRBNjVFNTVFMTFFNUFFNThBNUM3MDY2RDc4RTQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjhFMzRBNjZFNTVFMTFFNUFFNThBNUM3MDY2RDc4RTQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4oz7YhAAAFWklEQVR42uxYW2yVRRDu4WZBFFRASBo4TSsUBARiwAQrECuJCEigKhCivgiYVNpoiCRyFxOEEJQHEwlGCFC5Q0GgiSYC8gAPWG5iocWeE1JurdhTmhZK6eGb8q2ZbPbv+Q94CCVM8mX/3Z2dmd3Zmd39A9FoNMlQIBBIagmU1isohs4HPgaeZ/Pg8+HQ8QTqHIDid1YPQ9fYe5DxLIqnWa2EjBq9/kKtklomvQ0sVM54ENQa6ER0vEcZsonKiGwXQ5sW6pBB6nsdsBYoTbDOa9QlVJwoJW2skJrAz4iEJfABMByIsr4BYVZP3jQUA8h/lDwfAp3BM4c87VBMAjKBbkANIGllM3guOUK6J4p3KfdJ4DLwG1AA/gb0t8X3W0CGGlYtOmUHo38Iyp5sl3F9gSlAF6BEHAc5IQ+9k6k3GbgC/AL8DP7bak12mXTDcRnKlj8A4X0HCAK1QCHGH1Jrm6bUDkFblZJ599jQOSw9mGoqZ7kYIyzbTwBZUFIJYXn4Xsn22cBnQHcgjP4g+l+UhbSMMHQDyAHfD2pRPkGxAmjr4D8DyIQqgH89NtdgII+bSGg18JHM0dL7HvTuVno/R/EVU5JNp4Hx4C8Dn0RlEdsPom0k2iRtLmDbNmAM0MGSMQ+8S8AbdRldGioL+DlD+tAZpdz9DWx/CVjj4F9IZ5hJyo4tVM74B9gL/MW67MI14BtNfomiVcoZp4B9QBXr/YD9jOgCbhhDRWyLWDZNB67zIK5UevOhL4V6p6FYqpxxgnZXs95f7Gakx6JsZglZr6vaIRj/FG3822G370P9a6A3vPsKymHcXU0HKtOVJkkv3wPjGPqyM1NUKKfzViJRs1yNW8xykT74wDsQkNSUrhZfdGajXSJlk+JfJW2yiy2bJM+nov01lL2AA8rW6Zb+pigH7yDgTZk3YFJbX84pFp2XVMX16qM2kzgzg3bvse3265BGYAkGNIUZSlnUHao/0+I/BJ6ZgOTcI6i/rh2LtirKEXlfqogbCue+QEeZ82DpfzMMhySyvlGysuI4H2XC1yinlmnJ0AhuqlTWK1T6FX45Q75V/KN96NskqZzjqxjlesP6Ii+HXJE7stV2Tn13t/pOWvUUK/8nqclKGik3ZxjToKES9N9y7HSXXD87VlOJZX8PrUMd3ob+VN89fOirdGzquMnLIcmONn1Y1Vl99mTqYuyOJ9R3JA7eujjmZs+hvSWn3qPPZUv9g7rPeznkGd6SNOkb19kYcou90gzk9lcRVs1D0Ey4N6+gmt7wirYYlNmM/cWcg9nFA6HXfmRmeURLQqm5h+EWGPkpykv8RTGM7XLtPGi9BWzaCEzj9xeQU85bUhoPf0NbkSqq0b9TrqPcINtRz5Hrs1w5gVmK/6c45pZLvb8yLS5TfbugN4L+PXz1y8G7DfVclBeBicAMaz7/B+l0nAp9QXV5aNYhDbxqFjr65mIydRDmnbzDoUL05+NzKtPBjw62C+Is9Y4ZyV8hLwNHHPyrIfdwnAuw0tEmsrfyWzbcq8BzLI+5ZEBvEd8h90vl1m+U+dY7yTNlycAcK2fLTSUPxn3H+k3m/4hHbn9fnOd4yMl5s1kijrcZceAFRmCB4zCs4KNzpvXAM7q98nueI9VIRIwzBzhKeRcM5RvJfrjJwziXuo3dRmeNw46b1vga1WduleuZXaJeHvN6qZvXdkeGu3jxuOPm5ecPZ2tGWzc69TRvWl78ncjfgb8wzoC/0aeuteqlPoqTlzOrq6w/5IRj/InN4GXgMm9ejYk4J6ArmXrq8VKv9e2QlvbH0XYI5nDgYbf5Ufn9/sjSY4c8ZHRHgAEAtfMGpgVw4IMAAAAASUVORK5CYII=</ImageData>
+			<MIMEType>image/png</MIMEType>
+		</EmbeddedImage>
+		<EmbeddedImage Name="reportLogo6">
+			<ImageData>/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja3kAAQAEAAAAZAAA/+EDLGh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8APD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS41LWMwMjEgNzkuMTU0OTExLCAyMDEzLzEwLzI5LTExOjQ3OjE2ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozMzk4QTUwNUVGOEIxMUU1QTQ4M0QzNTRGMDMwNzhDMCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozMzk4QTUwNEVGOEIxMUU1QTQ4M0QzNTRGMDMwNzhDMCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpGOEUzNEE2NUU1NUUxMUU1QUU1OEE1QzcwNjZENzhFNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGOEUzNEE2NkU1NUUxMUU1QUU1OEE1QzcwNjZENzhFNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv/uAA5BZG9iZQBkwAAAAAH/2wCEAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB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</ImageData>
+			<MIMEType>image/jpeg</MIMEType>
+		</EmbeddedImage>
+		<EmbeddedImage Name="reportLogo7">
+			<ImageData>/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja3kAAQAEAAAAZAAA/+EDLGh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8APD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS41LWMwMjEgNzkuMTU0OTExLCAyMDEzLzEwLzI5LTExOjQ3OjE2ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozMzk4QTUwOUVGOEIxMUU1QTQ4M0QzNTRGMDMwNzhDMCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozMzk4QTUwOEVGOEIxMUU1QTQ4M0QzNTRGMDMwNzhDMCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpGOEUzNEE2NUU1NUUxMUU1QUU1OEE1QzcwNjZENzhFNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGOEUzNEE2NkU1NUUxMUU1QUU1OEE1QzcwNjZENzhFNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv/uAA5BZG9iZQBkwAAAAAH/2wCEAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB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</ImageData>
+			<MIMEType>image/jpeg</MIMEType>
+		</EmbeddedImage>
+	</EmbeddedImages>
+	<DataSources>
+		<DataSource Name="Supervision">
+			<DataSourceReference>\\vmware-host\Shared Folders\Desktop\Active Reports\Reports (Latest)\Reviewer Activity Report\ReviewerActivity.rdsx</DataSourceReference>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="ResultSet_0">
+			<Fields>
+				<Field Name="Activity">
+					<DataField>Activity</DataField>
+				</Field>
+				<Field Name="Reviewer">
+					<DataField>Reviewer</DataField>
+				</Field>
+				<Field Name="Reviewed">
+					<DataField>Reviewed</DataField>
+				</Field>
+				<Field Name="ClearedSubjectBatch">
+					<DataField>ClearedSubjectBatch</DataField>
+				</Field>
+				<Field Name="ClearedIndividual">
+					<DataField>ClearedIndividual</DataField>
+				</Field>
+				<Field Name="ClearedConversationBatch">
+					<DataField>ClearedConversationBatch</DataField>
+				</Field>
+				<Field Name="ClearedOtherBatch">
+					<DataField>ClearedOtherBatch</DataField>
+				</Field>
+				<Field Name="Other">
+					<DataField>Other</DataField>
+				</Field>
+				<Field Name="ConfirmClosed">
+					<DataField>ConfirmClosed</DataField>
+				</Field>
+				<Field Name="ConfirmFollowup">
+					<DataField>ConfirmFollowup</DataField>
+				</Field>
+				<Field Name="FollowupClosed">
+					<DataField>FollowupClosed</DataField>
+				</Field>
+				<Field Name="Ignored">
+					<DataField>Ignored</DataField>
+				</Field>
+				<Field Name="Commented">
+					<DataField>Commented</DataField>
+				</Field>
+				<Field Name="Identified">
+					<DataField>Identified</DataField>
+				</Field>
+				<Field Name="Escalated">
+					<DataField>Escalated</DataField>
+				</Field>
+				<Field Name="Deferred">
+					<DataField>Deferred</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>/Activities/Activity</CommandText>
+				<DataSourceName>Supervision</DataSourceName>
+			</Query>
+		</DataSet>
+		<DataSet Name="ResultSet_1">
+			<Fields>
+				<Field Name="ReportParameters">
+					<DataField>ReportParameters</DataField>
+				</Field>
+				<Field Name="From">
+					<DataField>From</DataField>
+				</Field>
+				<Field Name="To">
+					<DataField>To</DataField>
+				</Field>
+				<Field Name="ReviewTeam">
+					<DataField>ReviewTeam</DataField>
+				</Field>
+				<Field Name="CreatedBy">
+					<DataField>CreatedBy</DataField>
+				</Field>
+				<Field Name="CreatedOn">
+					<DataField>CreatedOn</DataField>
+				</Field>
+				<Field Name="JobExecutedOn">
+					<DataField>JobExecutedOn</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>/Activities/ReportParameters</CommandText>
+				<DataSourceName>Supervision</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+	<CustomProperties>
+		<CustomProperty>
+			<Name>PaperOrientation</Name>
+			<Value>Landscape</Value>
+		</CustomProperty>
+		<CustomProperty>
+			<Name>report:DesignTimeBackgroundRendering</Name>
+			<Value>True</Value>
+		</CustomProperty>
+	</CustomProperties>
+</Report>
