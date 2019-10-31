@@ -1,7 +1,4 @@
 language: java
 jdk:
-  - oraclejdk14
-cache:
-  directories:
-  - $HOME/.m2
+  - openjdk8
 script: mvn test -B
