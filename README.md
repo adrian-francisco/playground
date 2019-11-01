@@ -5,5 +5,5 @@ A place to play.
 * [GitHub Pages](https://adrian-francisco.github.io/playground)
 * [Travis CI](https://travis-ci.org/adrian-francisco/playground)
 
-## Status
-![CI Status](https://travis-ci.org/adrian-francisco/playground.svg?branch=master)
+## Build Status
+![Build Status](https://travis-ci.org/adrian-francisco/playground.svg?branch=master)
