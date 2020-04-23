@@ -18,7 +18,7 @@ public class CassandraMain {
                 String from = row.getString("from");
                 String subject = row.getString("subject");
 
-                System.out.println(String.format("The Row: %s, %s, %s, %s", id, body, from, subject));
+                System.out.println(String.format("The Row: %s, %s, %s, %s", id, from, subject, body));
             }
         }
     }

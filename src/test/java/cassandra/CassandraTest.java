@@ -27,6 +27,12 @@ public class CassandraTest {
     @Test
     public void test() {
         try (CqlSession session = cassandra.getSession()) {
+            
+            // try writing and reading from blob, does cassandra serialize for us?
+
+            // can't add undeclared columns
+            // session.execute("INSERT INTO messages (id, attachment) VALUES(7, 'attachment.pdf')");
+
             ResultSet rs = session.execute("select * from messages");
 
             for (Row row : rs.all()) {
@@ -34,8 +40,9 @@ public class CassandraTest {
                 String body = row.getString("body");
                 String from = row.getString("from");
                 String subject = row.getString("subject");
+                String unknown = null; // row.getString("unknown"); // illegal argument exception
 
-                System.out.println(String.format("The Row: %s, %s, %s, %s", id, body, from, subject));
+                System.out.println(String.format("The Row: %s, %s, %s, %s, %s", id, body, from, subject, unknown));
             }
         }
     }
