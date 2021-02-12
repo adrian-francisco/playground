@@ -1,8 +1,0 @@
-matrix:
-  include:
-    - language: java
-      jdk: openjdk11
-      script: mvn package -B
-
-    - language: csharp
-      solution: src/main/cs/Playground.sln
