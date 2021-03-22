@@ -10,30 +10,30 @@ echo "`date`: start..."
 
 customers=(glic lpl rjf bofa)
 
-customerStoreHosts_glic="10.8.15.219"
-customerStoreHosts_lpl="10.8.15.219"
-customerStoreHosts_rjf="10.8.15.219"
-customerStoreHosts_bofa="10.8.15.213"
+customerStoreHosts_glic="<host>"
+customerStoreHosts_lpl="<host>"
+customerStoreHosts_rjf="<host>"
+customerStoreHosts_bofa="<host>"
 
 customerStores_glic="fortiva_cust_1_4bb9530c05959bdf__be503a2_16387d6e845__8000"
 customerStores_lpl="fortiva_cust_1_acece357d4776abd_70db0e60_167f573a9c7__8000"
 customerStores_rjf="fortiva_cust_1_c996dd02de5c23a2_25c537bf_13697dc2840__8000"
 customerStores_bofa="fortiva_cust_1_60cff1fe4c86f23e_2eda01c7_16ca0f3938e__8000"
 
-supervisionStoreHosts_glic="10.8.15.221"
-supervisionStoreHosts_lpl="10.8.15.221"
-supervisionStoreHosts_rjf="10.8.15.221"
-supervisionStoreHosts_bofa="10.8.15.163"
+supervisionStoreHosts_glic="<host>"
+supervisionStoreHosts_lpl="<host>"
+supervisionStoreHosts_rjf="<host>"
+supervisionStoreHosts_bofa="<host>"
 
 supervisionStores_glic="fortiva_superng_1_388e07e165241c0b_5d7a69d7_16387f35e53__7ffc"
 supervisionStores_lpl="fortiva_superng_1_42925e3a343dd167_2679447c_169160daf44__7ffc"
 supervisionStores_rjf="fortiva_superng_1_3f77a473c5d254b7_636062c6_167cda2beb8__7ffc"
 supervisionStores_bofa="fortiva_superng_1_f3a080003270dc5e_2c31933a_16ca104f75f__7ffc"
 
-reportStoreHosts_glic="10.8.15.237"
-reportStoreHosts_lpl="10.8.15.247"
-reportStoreHosts_rjf="10.8.15.237"
-reportStoreHosts_bofa="10.8.15.169"
+reportStoreHosts_glic="<host>"
+reportStoreHosts_lpl="<host>"
+reportStoreHosts_rjf="<host>"
+reportStoreHosts_bofa="<host>"
 
 reportStores_glic="fortiva_rpt_1_61e41dafe0aadce8__7fb4b7bc_16387f026c2__7ffc"
 reportStores_lpl="fortiva_rpt_1_d9f1eb95cf82344d_37a73784_167f5805745__7ffc"
@@ -66,8 +66,8 @@ to_day="2019-12-03"
 #
 
 mysql=/usr/local/fortiva/mysql/bin/mysql
-user="fortro"
-pass="<CHANGE-ME!>"
+user="<username>"
+pass="<password>"
 
 IFS='-'
 

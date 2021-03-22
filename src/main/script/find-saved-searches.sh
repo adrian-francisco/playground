@@ -24,8 +24,8 @@
 echo "`date`: start..."
 
 mysql=/usr/local/fortiva/mysql/bin/mysql
-user="fortro"
-pass="<CHANGE-ME!>"
+user="<username>"
+pass="<password>"
 regex='~(8|44|178)~*1~*1000-01-01\s00:00:00~*[0-9]{4}-[0-9]{2}-[0-9]{2}\s[0-9]{2}:[0-9]0:00~'
 
 if [ ! -f $mysql ]

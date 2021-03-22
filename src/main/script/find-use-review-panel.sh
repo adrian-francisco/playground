@@ -13,8 +13,8 @@
 echo "`date`: start..."
 
 mysql=/usr/local/fortiva/mysql/bin/mysql
-user="fortro"
-pass="<CHANGE-ME!>"
+user="<username>"
+pass="<password>"
 ip=`hostname -i`
 
 if [ ! -f $mysql ]
