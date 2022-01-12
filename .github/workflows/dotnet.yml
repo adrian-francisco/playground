@@ -20,4 +20,4 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ./src/main/cs/Playground.csproj
     - name: Build
-      run: dotnet build --no-restore --project ./src/main/cs/Playground.csproj
+      run: dotnet build --no-restore ./src/main/cs/Playground.csproj
