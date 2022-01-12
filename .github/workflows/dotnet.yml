@@ -18,6 +18,6 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore --project src/main/cs
+      run: dotnet restore
     - name: Build
       run: dotnet build --no-restore --project src/main/cs
