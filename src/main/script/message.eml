@@ -1,0 +1,98 @@
+Received: from dc2.ex16ad16sd.qa ([10.27.11.49]) by ex1.hostedex16sd.qa with ESMTP ; Thu, 28 Apr 2022 14:25:17 -0400
+Content-Type: multipart/mixed;
+	boundary="_42462a96-0317-41e4-b937-fe61f2c86da5_"
+Subject: empty body
+To: Dept1User3 Dept1User3 <Dept1User3@ex16ad16sd.qa>
+From: Dept1User1 Dept1User1 <Dept1User1@ex16ad16sd.qa>
+Sender: <MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@ex16ad16sd.qa>
+Message-ID: <8d31f21b-d2f6-46ff-9585-bcf478832377@journal.report.generator>
+Date: Thu, 28 Apr 2022 18:25:16 +0000
+X-MS-Journal-Report:
+X-MS-Exchange-Parent-Message-Id: <757766d9c0d64de6b389b9556dd6f248@ex16ad16sd.qa>
+Auto-Submitted: auto-generated
+X-MS-Exchange-Generated-Message-Source: Journal Agent
+Keywords:
+MIME-Version: 1.0
+
+--_42462a96-0317-41e4-b937-fe61f2c86da5_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+Sender: Dept1User1@ex16ad16sd.qa
+Subject: empty message
+Message-Id: <757766d9c0d64de6b389b9556dd6f248@ex16ad16sd.qa>
+To: Dept1User3@ex16ad16sd.qa
+
+--_42462a96-0317-41e4-b937-fe61f2c86da5_
+Content-Type: message/rfc822
+
+Received: from dc2.ex16ad16sd.qa (10.27.11.49) by dc2.ex16ad16sd.qa
+ (10.27.11.49) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.1.2375.18; Thu, 28 Apr
+ 2022 14:25:15 -0400
+Received: from dc2.ex16ad16sd.qa ([fe80::8009:6560:a095:fef4]) by
+ dc2.ex16ad16sd.qa ([fe80::8009:6560:a095:fef4%15]) with mapi id
+ 15.01.2375.018; Thu, 28 Apr 2022 14:25:15 -0400
+From: Dept1User1 Dept1User1 <Dept1User1@ex16ad16sd.qa>
+To: Dept1User3 Dept1User3 <Dept1User3@ex16ad16sd.qa>
+Subject: empty message
+Thread-Topic: empty message
+Thread-Index: AdhbLUWPa+5bLSi8Ru6KUyl9ZPomPg==
+Date: Thu, 28 Apr 2022 18:25:15 +0000
+Message-ID: <757766d9c0d64de6b389b9556dd6f248@ex16ad16sd.qa>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 04
+X-MS-Exchange-Organization-AuthSource: dc2.ex16ad16sd.qa
+X-MS-Has-Attach:
+X-MS-Exchange-Organization-Network-Message-Id: 8680831b-897e-442b-73d3-08da294470e3
+X-MS-Exchange-Organization-SCL: -1
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+x-ms-exchange-organization-recordreviewcfmtype: 0
+x-ms-exchange-organization-originalsize: 8710
+x-ms-exchange-organization-originalarrivaltime: 28 Apr 2022 18:25:15.3009
+ (UTC)
+x-ms-exchange-organization-messagesource: StoreDriver
+x-ms-exchange-organization-fromentityheader: Hosted
+x-ms-exchange-organization-messagedirectionality: Originating
+x-ms-exchange-organization-id: 00000000-0000-0000-0000-000000000000
+x-ms-exchange-organization-clientrequestedsendrichinfo: True
+X-MS-Exchange-Organization-BCC:
+x-ms-exchange-organization-originalclientipaddress: 10.100.29.132
+x-originating-ip: [10.100.29.132]
+x-ms-exchange-organization-originalserveripaddress: fe80::8009:6560:a095:fef4%15
+x-ms-exchange-organization-submissionrecipientcount: 1
+x-ms-exchange-organization-orderedprecisionlatencyinprogress: LSRV=dc2.ex16ad16sd.qa:TOTAL-SUB=0.184|SA=0.092|MTSS-PEN=0.092(MTSSD-PEN=0.057(MTSSDA=0.006|MTSSDC=0.012|MTSSDSDM=0.001
+ ));2022-04-28T18:25:15.485Z
+x-ms-exchange-forest-arrivalhubserver: dc2.ex16ad16sd.qa
+x-ms-exchange-organization-cross-premises-headers-processed: dc2.ex16ad16sd.qa
+x-ms-exchange-organization-hygienepolicy: Standard
+x-ms-exchange-organization-messagelatency: SRV=dc2.ex16ad16sd.qa:TOTAL-SUB=0.403|SA=0.092|MTSS-PEN=0.311(MTSSD-PEN=0.276(MTSSDA=0.006|MTSSDC=0.012|MTSSDSDM=0.001
+ |SDSSO-PEN=0.218(SMSC=0.078(X-SMSDR=0.123)|MTSSDM-PEN=0.016)))
+x-ms-exchange-organization-avstamp-enterprise: 1.0
+x-ms-exchange-organization-recipient-limit-verified: True
+x-ms-exchange-organization-totalrecipientcount: 1
+x-ms-exchange-forest-indexagent-0: AQ0CZW4AASgAAAAPAAADH4sIAAAAAAAEAOPxSM3Jyefl4uVS4OViYG
+ AFACxw5oMQAAAAAQ7TAVJldHJpZXZlck9wZXJhdG9yLDEwLDU7UmV0
+ cmlldmVyT3BlcmF0b3IsMTEsMTk7UG9zdERvY1BhcnNlck9wZXJhdG
+ 9yLDEwLDQ7UG9zdERvY1BhcnNlck9wZXJhdG9yLDExLDA7UG9zdFdv
+ cmRCcmVha2VyRGlhZ25vc3RpY09wZXJhdG9yLDEwLDEzNDtQb3N0V2
+ 9yZEJyZWFrZXJEaWFnbm9zdGljT3BlcmF0b3IsMTEsMDtUcmFuc3Bv
+ cnRXcml0ZXJQcm9kdWNlciwyMCwyMjY=
+x-ms-exchange-forest-indexagent: 1 266
+x-ms-exchange-forest-emailmessagehash: 725F3A25
+x-ms-exchange-forest-language: en
+Content-Type: multipart/alternative;
+	boundary="_000_757766d9c0d64de6b389b9556dd6f248ex16ad16sdqa_"
+MIME-Version: 1.0
+
+--_000_757766d9c0d64de6b389b9556dd6f248ex16ad16sdqa_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+
+--_000_757766d9c0d64de6b389b9556dd6f248ex16ad16sdqa_--
+
+--_42462a96-0317-41e4-b937-fe61f2c86da5_--
